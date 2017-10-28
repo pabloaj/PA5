@@ -500,6 +500,10 @@ class CgenSupport {
 	emitStore(source, DEFAULT_OBJFIELDS, dest, s);
     }
     
+
+    static void emitComment(PrintStream s, String str) {
+        s.println("\t\t\t\t#"+str);
+    }
     /** Emits code to manipulate garbage collector 
      * @param s the output stream
      * */
