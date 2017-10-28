@@ -42,8 +42,8 @@ class CgenNode extends class_ {
     /** Does this node correspond to a basic class? */
     private int basic_status;
 
-    private LinkedList<AbstractSymbol> methodList;
-    private HashMap<AbstractSymbol,AbstractSymbol> methodClass;
+ private LinkedList<AbstractSymbol> methodList; // list of all methods in the current CgenNode
+    private HashMap<AbstractSymbol, AbstractSymbol> methodClass; // find class of a method
        public static Map<AbstractSymbol, Map<AbstractSymbol, Integer>> attrOffsetMap = new HashMap<AbstractSymbol, Map<AbstractSymbol, Integer>>();
 
     /** record the containing Type its in */
@@ -87,13 +87,14 @@ class CgenNode extends class_ {
      * @param table the class table
      * */
 
-
     CgenNode(Class_ c, int basic_status, CgenClassTable table) {
-	super(0, c.getName(), c.getParent(), c.getFeatures(), c.getFilename());
-	this.parent = null;
-	this.children = new Vector();
-	this.basic_status = basic_status;
-	  AbstractTable.stringtable.addString(name.getString());
+        super(0, c.getName(), c.getParent(), c.getFeatures(), c.getFilename());
+        this.parent = null;
+        this.children = new Vector();
+        this.basic_status = basic_status;
+        //this.methodMap = new HashMap<AbstractSymbol, Integer>(); // added
+        //this.methodOffsetMap = new HashMap<AbstractSymbol, Map<AbstractSymbol, Integer>>();
+        AbstractTable.stringtable.addString(name.getString());
         if(c.getName().toString().equals(TreeConstants.Object_.toString())){
             this.tag = OBJECT_CLASS_TAG;
         } else if (c.getName().toString().equals(TreeConstants.IO.toString())){
@@ -109,7 +110,6 @@ class CgenNode extends class_ {
             CURR_CLASS_TAG++;
         }
         this.cgenTable = table;
-    }
     }
 
     void addChild(CgenNode child) {
@@ -484,9 +484,6 @@ class CgenNode extends class_ {
         CgenSupport.emitComment(str, "Leaving objectInitEpilogue");
     }
 
-    /**
-     * emits code for object initializer
-     */
     public void codeObjInit(PrintStream str) {
         CgenSupport.emitComment(str, "Entered codeObjInit for " + this.name);
         str.print(this.getName() + CgenSupport.CLASSINIT_SUFFIX + CgenSupport.LABEL);
@@ -500,7 +497,6 @@ class CgenNode extends class_ {
         }
 
         if(this.name.equals(TreeConstants.Bool) || this.name.equals(TreeConstants.Str) || this.name.equals(TreeConstants.Int)){
-            //do nothing with the attributes
         }   else {
             for(Enumeration e = getFeatures().getElements() ; e.hasMoreElements() ; ) {
                 Feature feat = (Feature) e.nextElement();
@@ -518,18 +514,13 @@ class CgenNode extends class_ {
             }
         }
 
-        // move $a0 $s0
         CgenSupport.emitMove(CgenSupport.ACC, CgenSupport.SELF, str);
         popObjectInitEpilogue(str);
         CgenSupport.emitComment(str, "Leaving codeObjInit for " + this.name);
     }
 
 
-    /**
-     * emits code for class methods 
-     */
     public void codeClassMethods(PrintStream str) {
-        // no need to code methods for Int, Bool, String
         this.currentType = this.getName();
         if(this.basic()) {
             return;
@@ -541,21 +532,17 @@ class CgenNode extends class_ {
                 this.cgenTable.enterScope();
                 method met = (method) feat;
                 CgenSupport.emitComment(str, "Generating code for method " + met.name  +  " in class " + this.name);
-                //System.out.println("Method " + met.name + " in class " + this.name + " has " + met.formals.getLength() + " arguments");
                 str.print(this.getName()+CgenSupport.METHOD_SEP+met.name+CgenSupport.LABEL);
-                // dispatch should have saved its actuals, so we consider this offset
                 int offsetFormals = CgenSupport.WORD_SIZE*(met.formals.getLength() + 1);
                 CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, -offsetFormals,str);
-                //push fp, so, and ra in that order
                 CgenSupport.emitPush(CgenSupport.FP, str);
                 CgenSupport.emitPush(CgenSupport.SELF, str);
                 CgenSupport.emitPush(CgenSupport.RA, str);
 
-                //move frame pointer to point to top of current activation frame and save current self object
                 CgenSupport.emitAddiu(CgenSupport.FP, CgenSupport.SP, 16, str);
                 CgenSupport.emitMove(CgenSupport.SELF, CgenSupport.ACC, str);
 
-                //add formal parameter order to label to be able to calculate frame offsets ]
+               
                 int i = 1;
                 for(Enumeration e2 = met.formals.getElements(); e2.hasMoreElements(); ) {
                     formalc formy = (formalc) e2.nextElement();
@@ -568,17 +555,16 @@ class CgenNode extends class_ {
                 met.expr.code(str, this.cgenTable);
                 CgenSupport.emitComment(str, "Done Generating inner code for method " + met.name +" with AR_size of " + AR_size);
 
-                //restore fp, so, ra
                 CgenSupport.emitComment(str, "Incrementing Stack pointer and Restoring FP, SELF, and then jumping");
 
                 CgenSupport.emitLoad(CgenSupport.FP, 3, CgenSupport.SP, str);
                 CgenSupport.emitLoad(CgenSupport.SELF, 2, CgenSupport.SP, str);
                 CgenSupport.emitLoad(CgenSupport.RA, 1, CgenSupport.SP, str);
-                //pop the frame by incrementing the stack pointer
+               
                 CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, AR_size, str);
-                // now pop the arguments saved by dispatch
+               
                 CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, offsetFormals,str);
-                //return to caller
+               
                 CgenSupport.emitReturn(str);
 
                 this.cgenTable.exitScope();
@@ -593,7 +579,7 @@ class CgenNode extends class_ {
 }
 
 
-}
+
     
 //function add  i
 
