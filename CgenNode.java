@@ -150,12 +150,7 @@ class CgenNode extends class_ {
     boolean basic() { 
 	return basic_status == Basic; 
     }
-}
-    
-//function add  i
-
-
-    public int getTag(){
+      public int getTag(){
         return this.tag;
     }
 
@@ -596,4 +591,11 @@ class CgenNode extends class_ {
         return CURR_LABEL_COUNT++;
     }
 }
+
+
+}
+    
+//function add  i
+
+
     
