@@ -50,7 +50,8 @@ class CgenClassTable extends SymbolTable {
     // The following methods emit code for constants and global
     // declarations.
 
-    private static Map<AbstractSymbol, Integer> classTagMap = new HashMap<AbstractSymbol, Integer>();
+    private static Map<AbstractSymbol, Integer> classTagMap 
+     = new HashMap<AbstractSymbol, Integer>();
 
     public int getTagId(AbstractSymbol class_name) 
     {
