@@ -11,11 +11,11 @@
 	.globl	_bool_tag
 	.globl	_string_tag
 _int_tag:
-	.word	2
+	.word	0
 _bool_tag:
-	.word	3
+	.word	0
 _string_tag:
-	.word	4
+	.word	0
 	.globl	_MemMgr_INITIALIZER
 _MemMgr_INITIALIZER:
 	.word	_GenGC_Init
@@ -27,7 +27,7 @@ _MemMgr_TEST:
 	.word	0
 	.word	-1
 str_const75:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const1
@@ -35,7 +35,7 @@ str_const75:
 	.align	2
 	.word	-1
 str_const74:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -44,7 +44,7 @@ str_const74:
 	.align	2
 	.word	-1
 str_const73:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -53,7 +53,7 @@ str_const73:
 	.align	2
 	.word	-1
 str_const72:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const3
@@ -62,7 +62,7 @@ str_const72:
 	.align	2
 	.word	-1
 str_const71:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const4
@@ -71,7 +71,7 @@ str_const71:
 	.align	2
 	.word	-1
 str_const70:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const5
@@ -80,7 +80,7 @@ str_const70:
 	.align	2
 	.word	-1
 str_const69:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -89,7 +89,7 @@ str_const69:
 	.align	2
 	.word	-1
 str_const68:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -98,7 +98,7 @@ str_const68:
 	.align	2
 	.word	-1
 str_const67:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const7
@@ -107,7 +107,7 @@ str_const67:
 	.align	2
 	.word	-1
 str_const66:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const8
@@ -116,7 +116,7 @@ str_const66:
 	.align	2
 	.word	-1
 str_const65:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const9
@@ -125,7 +125,7 @@ str_const65:
 	.align	2
 	.word	-1
 str_const64:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const10
@@ -134,7 +134,7 @@ str_const64:
 	.align	2
 	.word	-1
 str_const63:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const4
@@ -143,7 +143,7 @@ str_const63:
 	.align	2
 	.word	-1
 str_const62:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -152,7 +152,7 @@ str_const62:
 	.align	2
 	.word	-1
 str_const61:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const3
@@ -161,7 +161,7 @@ str_const61:
 	.align	2
 	.word	-1
 str_const60:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const11
@@ -170,7 +170,7 @@ str_const60:
 	.align	2
 	.word	-1
 str_const59:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const4
@@ -179,7 +179,7 @@ str_const59:
 	.align	2
 	.word	-1
 str_const58:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const8
@@ -188,7 +188,7 @@ str_const58:
 	.align	2
 	.word	-1
 str_const57:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const9
@@ -197,7 +197,7 @@ str_const57:
 	.align	2
 	.word	-1
 str_const56:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const9
@@ -206,7 +206,7 @@ str_const56:
 	.align	2
 	.word	-1
 str_const55:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -215,7 +215,7 @@ str_const55:
 	.align	2
 	.word	-1
 str_const54:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const10
@@ -224,7 +224,7 @@ str_const54:
 	.align	2
 	.word	-1
 str_const53:
-	.word	4
+	.word	0
 	.word	11
 	.word	
 	.word	int_const12
@@ -233,7 +233,7 @@ str_const53:
 	.align	2
 	.word	-1
 str_const52:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -242,7 +242,7 @@ str_const52:
 	.align	2
 	.word	-1
 str_const51:
-	.word	4
+	.word	0
 	.word	17
 	.word	
 	.word	int_const13
@@ -251,7 +251,7 @@ str_const51:
 	.align	2
 	.word	-1
 str_const50:
-	.word	4
+	.word	0
 	.word	16
 	.word	
 	.word	int_const14
@@ -260,7 +260,7 @@ str_const50:
 	.align	2
 	.word	-1
 str_const49:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const15
@@ -269,7 +269,7 @@ str_const49:
 	.align	2
 	.word	-1
 str_const48:
-	.word	4
+	.word	0
 	.word	20
 	.word	
 	.word	int_const16
@@ -278,7 +278,7 @@ str_const48:
 	.align	2
 	.word	-1
 str_const47:
-	.word	4
+	.word	0
 	.word	19
 	.word	
 	.word	int_const17
@@ -287,7 +287,7 @@ str_const47:
 	.align	2
 	.word	-1
 str_const46:
-	.word	4
+	.word	0
 	.word	12
 	.word	
 	.word	int_const18
@@ -296,7 +296,7 @@ str_const46:
 	.align	2
 	.word	-1
 str_const45:
-	.word	4
+	.word	0
 	.word	14
 	.word	
 	.word	int_const19
@@ -305,7 +305,7 @@ str_const45:
 	.align	2
 	.word	-1
 str_const44:
-	.word	4
+	.word	0
 	.word	9
 	.word	
 	.word	int_const20
@@ -314,7 +314,7 @@ str_const44:
 	.align	2
 	.word	-1
 str_const43:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const15
@@ -323,7 +323,7 @@ str_const43:
 	.align	2
 	.word	-1
 str_const42:
-	.word	4
+	.word	0
 	.word	14
 	.word	
 	.word	int_const21
@@ -332,7 +332,7 @@ str_const42:
 	.align	2
 	.word	-1
 str_const41:
-	.word	4
+	.word	0
 	.word	16
 	.word	
 	.word	int_const14
@@ -341,7 +341,7 @@ str_const41:
 	.align	2
 	.word	-1
 str_const40:
-	.word	4
+	.word	0
 	.word	12
 	.word	
 	.word	int_const22
@@ -350,7 +350,7 @@ str_const40:
 	.align	2
 	.word	-1
 str_const39:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -359,7 +359,7 @@ str_const39:
 	.align	2
 	.word	-1
 str_const38:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -368,7 +368,7 @@ str_const38:
 	.align	2
 	.word	-1
 str_const37:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -377,7 +377,7 @@ str_const37:
 	.align	2
 	.word	-1
 str_const36:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -386,7 +386,7 @@ str_const36:
 	.align	2
 	.word	-1
 str_const35:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -395,7 +395,7 @@ str_const35:
 	.align	2
 	.word	-1
 str_const34:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const10
@@ -404,7 +404,7 @@ str_const34:
 	.align	2
 	.word	-1
 str_const33:
-	.word	4
+	.word	0
 	.word	17
 	.word	
 	.word	int_const23
@@ -413,7 +413,7 @@ str_const33:
 	.align	2
 	.word	-1
 str_const32:
-	.word	4
+	.word	0
 	.word	12
 	.word	
 	.word	int_const22
@@ -422,7 +422,7 @@ str_const32:
 	.align	2
 	.word	-1
 str_const31:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const7
@@ -431,7 +431,7 @@ str_const31:
 	.align	2
 	.word	-1
 str_const30:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -440,7 +440,7 @@ str_const30:
 	.align	2
 	.word	-1
 str_const29:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const24
@@ -449,7 +449,7 @@ str_const29:
 	.align	2
 	.word	-1
 str_const28:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const11
@@ -458,7 +458,7 @@ str_const28:
 	.align	2
 	.word	-1
 str_const27:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const24
@@ -467,7 +467,7 @@ str_const27:
 	.align	2
 	.word	-1
 str_const26:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const11
@@ -476,7 +476,7 @@ str_const26:
 	.align	2
 	.word	-1
 str_const25:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const3
@@ -485,7 +485,7 @@ str_const25:
 	.align	2
 	.word	-1
 str_const24:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const11
@@ -494,7 +494,7 @@ str_const24:
 	.align	2
 	.word	-1
 str_const23:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const3
@@ -503,7 +503,7 @@ str_const23:
 	.align	2
 	.word	-1
 str_const22:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const25
@@ -512,7 +512,7 @@ str_const22:
 	.align	2
 	.word	-1
 str_const21:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const26
@@ -521,7 +521,7 @@ str_const21:
 	.align	2
 	.word	-1
 str_const20:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const4
@@ -531,7 +531,7 @@ str_const20:
 	.align	2
 	.word	-1
 str_const19:
-	.word	4
+	.word	0
 	.word	13
 	.word	
 	.word	int_const27
@@ -540,7 +540,7 @@ str_const19:
 	.align	2
 	.word	-1
 str_const18:
-	.word	4
+	.word	0
 	.word	14
 	.word	
 	.word	int_const28
@@ -549,7 +549,7 @@ str_const18:
 	.align	2
 	.word	-1
 str_const17:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const15
@@ -558,7 +558,7 @@ str_const17:
 	.align	2
 	.word	-1
 str_const16:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -567,7 +567,7 @@ str_const16:
 	.align	2
 	.word	-1
 str_const15:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const4
@@ -576,7 +576,7 @@ str_const15:
 	.align	2
 	.word	-1
 str_const14:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -585,7 +585,7 @@ str_const14:
 	.align	2
 	.word	-1
 str_const13:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const10
@@ -594,7 +594,7 @@ str_const13:
 	.align	2
 	.word	-1
 str_const12:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -603,7 +603,7 @@ str_const12:
 	.align	2
 	.word	-1
 str_const11:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -612,7 +612,7 @@ str_const11:
 	.align	2
 	.word	-1
 str_const10:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -621,7 +621,7 @@ str_const10:
 	.align	2
 	.word	-1
 str_const9:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const10
@@ -630,7 +630,7 @@ str_const9:
 	.align	2
 	.word	-1
 str_const8:
-	.word	4
+	.word	0
 	.word	11
 	.word	
 	.word	int_const29
@@ -639,7 +639,7 @@ str_const8:
 	.align	2
 	.word	-1
 str_const7:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const6
@@ -648,7 +648,7 @@ str_const7:
 	.align	2
 	.word	-1
 str_const6:
-	.word	4
+	.word	0
 	.word	16
 	.word	
 	.word	int_const30
@@ -657,7 +657,7 @@ str_const6:
 	.align	2
 	.word	-1
 str_const5:
-	.word	4
+	.word	0
 	.word	16
 	.word	
 	.word	int_const31
@@ -666,7 +666,7 @@ str_const5:
 	.align	2
 	.word	-1
 str_const4:
-	.word	4
+	.word	0
 	.word	17
 	.word	
 	.word	int_const23
@@ -675,7 +675,7 @@ str_const4:
 	.align	2
 	.word	-1
 str_const3:
-	.word	4
+	.word	0
 	.word	16
 	.word	
 	.word	int_const31
@@ -684,7 +684,7 @@ str_const3:
 	.align	2
 	.word	-1
 str_const2:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -693,7 +693,7 @@ str_const2:
 	.align	2
 	.word	-1
 str_const1:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -702,7 +702,7 @@ str_const1:
 	.align	2
 	.word	-1
 str_const0:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const32
@@ -711,211 +711,211 @@ str_const0:
 	.align	2
 	.word	-1
 int_const32:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	11
 	.word	-1
 int_const31:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	47
 	.word	-1
 int_const30:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	45
 	.word	-1
 int_const29:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	27
 	.word	-1
 int_const28:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	39
 	.word	-1
 int_const27:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	35
 	.word	-1
 int_const26:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	14
 	.word	-1
 int_const25:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	5
 	.word	-1
 int_const24:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	23
 	.word	-1
 int_const23:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	48
 	.word	-1
 int_const22:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	31
 	.word	-1
 int_const21:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	36
 	.word	-1
 int_const20:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	18
 	.word	-1
 int_const19:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	37
 	.word	-1
 int_const18:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	30
 	.word	-1
 int_const17:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	56
 	.word	-1
 int_const16:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	61
 	.word	-1
 int_const15:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	20
 	.word	-1
 int_const14:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	46
 	.word	-1
 int_const13:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	50
 	.word	-1
 int_const12:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	24
 	.word	-1
 int_const11:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	2
 	.word	-1
 int_const10:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	7
 	.word	-1
 int_const9:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	9
 	.word	-1
 int_const8:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	10
 	.word	-1
 int_const7:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	12
 	.word	-1
 int_const6:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	13
 	.word	-1
 int_const5:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	8
 	.word	-1
 int_const4:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	6
 	.word	-1
 int_const3:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	3
 	.word	-1
 int_const2:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	4
 	.word	-1
 int_const1:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	0
 	.word	-1
 int_const0:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	1
 	.word	-1
 bool_const0:
-	.word	3
+	.word	0
 	.word	4
 	.word	
 	.word	0
 	.word	-1
 bool_const1:
-	.word	3
+	.word	0
 	.word	4
 	.word	
 	.word	1

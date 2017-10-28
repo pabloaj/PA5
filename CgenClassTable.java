@@ -27,6 +27,7 @@ import java.util.Enumeration;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -51,13 +52,11 @@ class CgenClassTable extends SymbolTable {
     // declarations.
 
     private static Map<AbstractSymbol, Integer> classTagMap 
-     = new HashMap<AbstractSymbol, Integer>();
+        = new HashMap<AbstractSymbol, Integer>();
 
-    public int getTagId(AbstractSymbol class_name) 
-    {
+    public int getTagId(AbstractSymbol class_name) {
         return classTagMap.get(class_name);
     }
-
     /** Emits code to start the .data segment and to
      * declare the global names.
      * */
@@ -387,53 +386,43 @@ class CgenClassTable extends SymbolTable {
 
     /** Constructs a new class table and invokes the code generator */
     public CgenClassTable(Classes cls, PrintStream str) {
-		nds = new Vector();
+	nds = new Vector();
 
-		this.str = str;
+	this.str = str;
 
-		stringclasstag = CgenNode.STRING_CLASS_TAG /* Change to your String class tag here */;
-		intclasstag =    CgenNode.INT_CLASS_TAG /* Change to your Int class tag here */;
-		boolclasstag =   CgenNode.BOOL_CLASS_TAG /* Change to your Bool class tag here */;
+	stringclasstag = 0 /* Change to your String class tag here */;
+	intclasstag =    0 /* Change to your Int class tag here */;
+	boolclasstag =   0 /* Change to your Bool class tag here */;
 
-		enterScope();
-		if (Flags.cgen_debug) System.out.println("Building CgenClassTable");
+	enterScope();
+	if (Flags.cgen_debug) System.out.println("Building CgenClassTable");
 	
-		installBasicClasses();
-		installClasses(cls);
-		buildInheritanceTree();
+	installBasicClasses();
+	installClasses(cls);
+	buildInheritanceTree();
 
-		code();
+	code();
 
-		exitScope();
-
-		System.out.println("attrOffsetMap: ");
-    	System.out.println(CgenNode.attrOffsetMap);
+	exitScope();
     }
 
     /** This method is the meat of the code generator.  It is to be
         filled in programming assignment 5 */
-    public void code() 
-    {
-		for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
-            CgenNode tmpNode = (CgenNode) en.nextElement();
-            classTagMap.put(tmpNode.name, tmpNode.getTag());
-        }
+    public void code() {
+	if (Flags.cgen_debug) System.out.println("coding global data");
+	codeGlobalData();
 
-		if (Flags.cgen_debug) System.out.println("coding global data");
-			codeGlobalData();
+	if (Flags.cgen_debug) System.out.println("choosing gc");
+	codeSelectGc();
 
-		if (Flags.cgen_debug) System.out.println("choosing gc");
-			codeSelectGc();
-
-		if (Flags.cgen_debug) System.out.println("coding constants");
-			codeConstants();
+	if (Flags.cgen_debug) System.out.println("coding constants");
+	codeConstants();
 
 	//                 Add your code to emit
 	//                   - prototype objects
 	//                   - class_nameTab
 	//                   - dispatch tables
-
-		str.print(CgenSupport.CLASSNAMETAB + CgenSupport.LABEL);
+	str.print(CgenSupport.CLASSNAMETAB + CgenSupport.LABEL);
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
             ((CgenNode) en.nextElement()).codeNameTab(str);
         }
@@ -456,19 +445,20 @@ class CgenClassTable extends SymbolTable {
 
         // Class attrTab
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
-            ((CgenNode) en.nextElement()).codeAttrTables(str);
+           ((CgenNode) en.nextElement()).codeAttrTables(str);
         }
         //                   - dispatch tables
-        root().buildDispatchTables(str, new LinkedList<AbstractSymbol>(), new HashMap<AbstractSymbol, AbstractSymbol>());	
-
-        //					 - prototype objects
+        root().buildDispatchTables(str, new LinkedList<AbstractSymbol>(), new HashMap<AbstractSymbol, AbstractSymbol>());
+        
+        //                   - prototype objects
         //for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
         //    ((CgenNode) en.nextElement()).codeProtObj(str);
         //}
-		root().codeObjProt(str);			
+        root().codeObjProt(str);
 
-		if (Flags.cgen_debug) System.out.println("coding global text");
-		codeGlobalText();
+
+	if (Flags.cgen_debug) System.out.println("coding global text");
+	codeGlobalText();
 
 	//                 Add your code to emit
 	//                   - object initializer
@@ -491,9 +481,8 @@ class CgenClassTable extends SymbolTable {
     }
 
     /** Gets the root of the inheritance tree */
-    public CgenNode root() 
-    {
-		return (CgenNode)probe(TreeConstants.Object_);
+    public CgenNode root() {
+	return (CgenNode)probe(TreeConstants.Object_);
     }
 }
 			  

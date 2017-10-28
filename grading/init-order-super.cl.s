@@ -11,11 +11,11 @@
 	.globl	_bool_tag
 	.globl	_string_tag
 _int_tag:
-	.word	2
+	.word	0
 _bool_tag:
-	.word	3
+	.word	0
 _string_tag:
-	.word	4
+	.word	0
 	.globl	_MemMgr_INITIALIZER
 _MemMgr_INITIALIZER:
 	.word	_NoGC_Init
@@ -27,7 +27,7 @@ _MemMgr_TEST:
 	.word	0
 	.word	-1
 str_const13:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const5
@@ -35,7 +35,7 @@ str_const13:
 	.align	2
 	.word	-1
 str_const12:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const3
@@ -44,7 +44,7 @@ str_const12:
 	.align	2
 	.word	-1
 str_const11:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const3
@@ -53,7 +53,7 @@ str_const11:
 	.align	2
 	.word	-1
 str_const10:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const6
@@ -62,7 +62,7 @@ str_const10:
 	.align	2
 	.word	-1
 str_const9:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const3
@@ -71,7 +71,7 @@ str_const9:
 	.align	2
 	.word	-1
 str_const8:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const2
@@ -80,7 +80,7 @@ str_const8:
 	.align	2
 	.word	-1
 str_const7:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const1
@@ -89,7 +89,7 @@ str_const7:
 	.align	2
 	.word	-1
 str_const6:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const6
@@ -98,7 +98,7 @@ str_const6:
 	.align	2
 	.word	-1
 str_const5:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const7
@@ -107,7 +107,7 @@ str_const5:
 	.align	2
 	.word	-1
 str_const4:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const8
@@ -116,7 +116,7 @@ str_const4:
 	.align	2
 	.word	-1
 str_const3:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const8
@@ -125,7 +125,7 @@ str_const3:
 	.align	2
 	.word	-1
 str_const2:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const9
@@ -134,7 +134,7 @@ str_const2:
 	.align	2
 	.word	-1
 str_const1:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -143,7 +143,7 @@ str_const1:
 	.align	2
 	.word	-1
 str_const0:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const10
@@ -152,79 +152,79 @@ str_const0:
 	.align	2
 	.word	-1
 int_const10:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	21
 	.word	-1
 int_const9:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	13
 	.word	-1
 int_const8:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	9
 	.word	-1
 int_const7:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	10
 	.word	-1
 int_const6:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	6
 	.word	-1
 int_const5:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	0
 	.word	-1
 int_const4:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	5
 	.word	-1
 int_const3:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	4
 	.word	-1
 int_const2:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	3
 	.word	-1
 int_const1:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	2
 	.word	-1
 int_const0:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	1
 	.word	-1
 bool_const0:
-	.word	3
+	.word	0
 	.word	4
 	.word	
 	.word	0
 	.word	-1
 bool_const1:
-	.word	3
+	.word	0
 	.word	4
 	.word	
 	.word	1

@@ -11,11 +11,11 @@
 	.globl	_bool_tag
 	.globl	_string_tag
 _int_tag:
-	.word	2
+	.word	0
 _bool_tag:
-	.word	3
+	.word	0
 _string_tag:
-	.word	4
+	.word	0
 	.globl	_MemMgr_INITIALIZER
 _MemMgr_INITIALIZER:
 	.word	_NoGC_Init
@@ -27,7 +27,7 @@ _MemMgr_TEST:
 	.word	0
 	.word	-1
 str_const14:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const0
@@ -35,7 +35,7 @@ str_const14:
 	.align	2
 	.word	-1
 str_const13:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const1
@@ -44,7 +44,7 @@ str_const13:
 	.align	2
 	.word	-1
 str_const12:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -53,7 +53,7 @@ str_const12:
 	.align	2
 	.word	-1
 str_const11:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const1
@@ -62,7 +62,7 @@ str_const11:
 	.align	2
 	.word	-1
 str_const10:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const3
@@ -71,7 +71,7 @@ str_const10:
 	.align	2
 	.word	-1
 str_const9:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const4
@@ -80,7 +80,7 @@ str_const9:
 	.align	2
 	.word	-1
 str_const8:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const2
@@ -89,7 +89,7 @@ str_const8:
 	.align	2
 	.word	-1
 str_const7:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const5
@@ -98,7 +98,7 @@ str_const7:
 	.align	2
 	.word	-1
 str_const6:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const6
@@ -107,7 +107,7 @@ str_const6:
 	.align	2
 	.word	-1
 str_const5:
-	.word	4
+	.word	0
 	.word	7
 	.word	
 	.word	int_const6
@@ -116,7 +116,7 @@ str_const5:
 	.align	2
 	.word	-1
 str_const4:
-	.word	4
+	.word	0
 	.word	8
 	.word	
 	.word	int_const7
@@ -125,7 +125,7 @@ str_const4:
 	.align	2
 	.word	-1
 str_const3:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const8
@@ -134,7 +134,7 @@ str_const3:
 	.align	2
 	.word	-1
 str_const2:
-	.word	4
+	.word	0
 	.word	6
 	.word	
 	.word	int_const1
@@ -143,7 +143,7 @@ str_const2:
 	.align	2
 	.word	-1
 str_const1:
-	.word	4
+	.word	0
 	.word	5
 	.word	
 	.word	int_const3
@@ -152,7 +152,7 @@ str_const1:
 	.align	2
 	.word	-1
 str_const0:
-	.word	4
+	.word	0
 	.word	10
 	.word	
 	.word	int_const9
@@ -161,73 +161,73 @@ str_const0:
 	.align	2
 	.word	-1
 int_const9:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	21
 	.word	-1
 int_const8:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	1
 	.word	-1
 int_const7:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	13
 	.word	-1
 int_const6:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	9
 	.word	-1
 int_const5:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	10
 	.word	-1
 int_const4:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	2
 	.word	-1
 int_const3:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	3
 	.word	-1
 int_const2:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	6
 	.word	-1
 int_const1:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	4
 	.word	-1
 int_const0:
-	.word	2
+	.word	0
 	.word	4
 	.word	
 	.word	0
 	.word	-1
 bool_const0:
-	.word	3
+	.word	0
 	.word	4
 	.word	
 	.word	0
 	.word	-1
 bool_const1:
-	.word	3
+	.word	0
 	.word	4
 	.word	
 	.word	1
@@ -516,69 +516,3 @@ Main.main:
 	li	$t1 1
 	jal	_case_abort2
 label0:
-	li	$t1 4
-label1:
-	beq	$t1 -2 label3
-	li	$t2 4
-	bne	$t1 $t2 label4
-				#BEGIN dispatch for method out_string in class Main
-				#Evaluating and pushing argument of type String to current frame
-				#Entered cgen for object: var
-	lw	$a0 12($s0)
-				#Exited cgen for object
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-				#Done pushing argument of type String to current frame
-				#Entered cgen for object: self
-	move	$a0 $s0
-				#Exited cgen for object
-	bne	$a0 $zero label5
-	la	$a0 str_const0
-	li	$t1 1
-	jal	_dispatch_abort
-label5:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr	$t1
-				#DONE dispatch for method out_string in class Main
-	b	label2
-label4:
-	la	$t1 class_parentTab
-	lw	$t1 16($t1)
-	b	label1
-label3:
-	jal	_case_abort
-label2:
-				#leaving cgen for case
-				#BEGIN dispatch for method out_string in class Main
-				#Evaluating and pushing argument of type String to current frame
-				#Entered cgen for string const expression
-	la	$a0 str_const3
-				#Leaving cgen for string const expression
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-				#Done pushing argument of type String to current frame
-				#Entered cgen for object: self
-	move	$a0 $s0
-				#Exited cgen for object
-	bne	$a0 $zero label6
-	la	$a0 str_const0
-	li	$t1 1
-	jal	_dispatch_abort
-label6:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr	$t1
-				#DONE dispatch for method out_string in class Main
-				#Leaving cgen for block
-				#Done Generating inner code for method main with AR_size of 12
-				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	addiu	$sp $sp 4
-	jr	$ra	
-				#Leaving codeClassMethods for Main
-
-# end of generated code

@@ -674,9 +674,6 @@ class static_dispatch extends Expression {
         CgenSupport.emitLabelDef(notVoidDispatchLabel, s);
 
         //if not void continue as normal
-
-        //load dispatch table into T1
-
         //CgenSupport.emitLoad(CgenSupport.T1, 2, CgenSupport.ACC, s);
         CgenSupport.emitLoadAddress(CgenSupport.T1, type_name + CgenSupport.DISPTAB_SUFFIX, s);
         CgenSupport.emitLoad(CgenSupport.T1, 2, CgenSupport.T1, s);
@@ -2144,5 +2141,4 @@ class object extends Expression {
 
 
 }
-
 
