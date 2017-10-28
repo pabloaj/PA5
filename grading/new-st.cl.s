@@ -1,3 +1,4 @@
+# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -25,82 +26,109 @@ _MemMgr_COLLECTOR:
 _MemMgr_TEST:
 	.word	0
 	.word	-1
-str_const11:
+str_const14:
 	.word	4
 	.word	5
-	.word	String_dispTab
+	.word	
 	.word	int_const1
+	.byte	0	
+	.align	2
+	.word	-1
+str_const13:
+	.word	4
+	.word	6
+	.word	
+	.word	int_const2
+	.ascii	"Main"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const12:
+	.word	4
+	.word	5
+	.word	
+	.word	int_const0
+	.ascii	"A"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const11:
+	.word	4
+	.word	6
+	.word	
+	.word	int_const3
+	.ascii	"String"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const10:
 	.word	4
 	.word	6
-	.word	String_dispTab
+	.word	
 	.word	int_const2
-	.ascii	"Main"
+	.ascii	"Bool"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const9:
 	.word	4
 	.word	5
-	.word	String_dispTab
-	.word	int_const0
-	.ascii	"A"
+	.word	
+	.word	int_const4
+	.ascii	"Int"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const8:
 	.word	4
-	.word	6
-	.word	String_dispTab
-	.word	int_const3
-	.ascii	"String"
+	.word	5
+	.word	
+	.word	int_const5
+	.ascii	"IO"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const7:
 	.word	4
 	.word	6
-	.word	String_dispTab
-	.word	int_const2
-	.ascii	"Bool"
+	.word	
+	.word	int_const3
+	.ascii	"Object"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const6:
 	.word	4
-	.word	5
-	.word	String_dispTab
-	.word	int_const4
-	.ascii	"Int"
+	.word	7
+	.word	
+	.word	int_const6
+	.ascii	"_prim_slot"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const5:
 	.word	4
-	.word	5
-	.word	String_dispTab
-	.word	int_const5
-	.ascii	"IO"
+	.word	7
+	.word	
+	.word	int_const7
+	.ascii	"SELF_TYPE"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const4:
 	.word	4
-	.word	6
-	.word	String_dispTab
-	.word	int_const3
-	.ascii	"Object"
+	.word	7
+	.word	
+	.word	int_const7
+	.ascii	"_no_class"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const3:
 	.word	4
 	.word	8
-	.word	String_dispTab
-	.word	int_const6
+	.word	
+	.word	int_const8
 	.ascii	"<basic class>"
 	.byte	0	
 	.align	2
@@ -108,7 +136,7 @@ str_const3:
 str_const2:
 	.word	4
 	.word	5
-	.word	String_dispTab
+	.word	
 	.word	int_const0
 	.ascii	"\n"
 	.byte	0	
@@ -117,94 +145,106 @@ str_const2:
 str_const1:
 	.word	4
 	.word	6
-	.word	String_dispTab
-	.word	int_const7
+	.word	
+	.word	int_const9
 	.ascii	"x is "
 	.byte	0	
 	.align	2
 	.word	-1
 str_const0:
 	.word	4
-	.word	15
-	.word	String_dispTab
-	.word	int_const8
-	.ascii	"/usr/class/cs143/tests/fa05/PA5/new-st.cl"
+	.word	7
+	.word	
+	.word	int_const10
+	.ascii	"./new-st.cl"
 	.byte	0	
 	.align	2
+	.word	-1
+int_const10:
+	.word	2
+	.word	4
+	.word	
+	.word	11
+	.word	-1
+int_const9:
+	.word	2
+	.word	4
+	.word	
+	.word	5
 	.word	-1
 int_const8:
 	.word	2
 	.word	4
-	.word	Int_dispTab
-	.word	41
+	.word	
+	.word	13
 	.word	-1
 int_const7:
 	.word	2
 	.word	4
-	.word	Int_dispTab
-	.word	5
+	.word	
+	.word	9
 	.word	-1
 int_const6:
 	.word	2
 	.word	4
-	.word	Int_dispTab
-	.word	13
+	.word	
+	.word	10
 	.word	-1
 int_const5:
 	.word	2
 	.word	4
-	.word	Int_dispTab
+	.word	
 	.word	2
 	.word	-1
 int_const4:
 	.word	2
 	.word	4
-	.word	Int_dispTab
+	.word	
 	.word	3
 	.word	-1
 int_const3:
 	.word	2
 	.word	4
-	.word	Int_dispTab
+	.word	
 	.word	6
 	.word	-1
 int_const2:
 	.word	2
 	.word	4
-	.word	Int_dispTab
+	.word	
 	.word	4
 	.word	-1
 int_const1:
 	.word	2
 	.word	4
-	.word	Int_dispTab
+	.word	
 	.word	0
 	.word	-1
 int_const0:
 	.word	2
 	.word	4
-	.word	Int_dispTab
+	.word	
 	.word	1
 	.word	-1
 bool_const0:
 	.word	3
 	.word	4
-	.word	Bool_dispTab
+	.word	
 	.word	0
 	.word	-1
 bool_const1:
 	.word	3
 	.word	4
-	.word	Bool_dispTab
+	.word	
 	.word	1
 class_nameTab:
-	.word	str_const4
-	.word	str_const5
-	.word	str_const6
 	.word	str_const7
 	.word	str_const8
 	.word	str_const9
 	.word	str_const10
+	.word	str_const11
+	.word	str_const12
+	.word	str_const13
 class_objTab:
 	.word	Object_protObj
 	.word	Object_init
@@ -220,34 +260,35 @@ class_objTab:
 	.word	A_init
 	.word	Main_protObj
 	.word	Main_init
+class_parentTab:
+	.word	-2
+	.word	0
+	.word	0
+	.word	0
+	.word	0
+	.word	0
+	.word	0
+class_attrTabTab:
+	.word	Object_attrTab
+	.word	IO_attrTab
+	.word	Int_attrTab
+	.word	Bool_attrTab
+	.word	String_attrTab
+	.word	A_attrTab
+	.word	Main_attrTab
+Object_attrTab:
+IO_attrTab:
+Int_attrTab:
+	.word	-2
+Bool_attrTab:
+	.word	-2
+String_attrTab:
+	.word	2
+	.word	-2
+A_attrTab:
+	.word	2
+Main_attrTab:
 Object_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-Main_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	Main.main
-A_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	A.printX
-	.word	A.new_st
-	.word	A.bump
-String_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	String.length
-	.word	String.concat
-	.word	String.substr
-Bool_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-Int_dispTab:
 	.word	Object.abort
 	.word	Object.type_name
 	.word	Object.copy
@@ -259,46 +300,87 @@ IO_dispTab:
 	.word	IO.out_int
 	.word	IO.in_string
 	.word	IO.in_int
+Int_dispTab:
+	.word	Object.abort
+	.word	Object.type_name
+	.word	Object.copy
+Bool_dispTab:
+	.word	Object.abort
+	.word	Object.type_name
+	.word	Object.copy
+String_dispTab:
+	.word	Object.abort
+	.word	Object.type_name
+	.word	Object.copy
+	.word	String.length
+	.word	String.concat
+	.word	String.substr
+A_dispTab:
+	.word	Object.abort
+	.word	Object.type_name
+	.word	Object.copy
+	.word	A.printX
+	.word	A.new_st
+	.word	A.bump
+Main_dispTab:
+	.word	Object.abort
+	.word	Object.type_name
+	.word	Object.copy
+	.word	Main.main
 	.word	-1
+				#Entered codeProtObj for Object
 Object_protObj:
 	.word	0
 	.word	3
 	.word	Object_dispTab
+				#Leaving codeProtObj for Object
 	.word	-1
-Main_protObj:
-	.word	6
+				#Entered codeProtObj for IO
+IO_protObj:
+	.word	1
 	.word	3
-	.word	Main_dispTab
+	.word	IO_dispTab
+				#Leaving codeProtObj for IO
 	.word	-1
-A_protObj:
-	.word	5
+				#Entered codeProtObj for Int
+Int_protObj:
+	.word	2
 	.word	4
-	.word	A_dispTab
-	.word	int_const1
+	.word	Int_dispTab
+	.word	0
+				#Leaving codeProtObj for Int
 	.word	-1
+				#Entered codeProtObj for Bool
+Bool_protObj:
+	.word	3
+	.word	4
+	.word	Bool_dispTab
+	.word	0
+				#Leaving codeProtObj for Bool
+	.word	-1
+				#Entered codeProtObj for String
 String_protObj:
 	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const1
 	.word	0
+				#Leaving codeProtObj for String
 	.word	-1
-Bool_protObj:
-	.word	3
+				#Entered codeProtObj for A
+A_protObj:
+	.word	5
 	.word	4
-	.word	Bool_dispTab
-	.word	0
+	.word	A_dispTab
+	.word	int_const1
+				#Leaving codeProtObj for A
 	.word	-1
-Int_protObj:
-	.word	2
-	.word	4
-	.word	Int_dispTab
-	.word	0
-	.word	-1
-IO_protObj:
-	.word	1
+				#Entered codeProtObj for Main
+Main_protObj:
+	.word	6
 	.word	3
-	.word	IO_dispTab
+	.word	Main_dispTab
+				#Leaving codeProtObj for Main
 	.globl	heap_start
 heap_start:
 	.word	0
@@ -308,303 +390,341 @@ heap_start:
 	.globl	String_init
 	.globl	Bool_init
 	.globl	Main.main
+				#Entered codeObjInit for Object
 Object_init:
+				#Entered objectInitPrologue
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
 	sw	$s0 8($sp)
 	sw	$ra 4($sp)
-	addiu	$fp $sp 4
+	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Leaving objectInitPrologue
 	move	$a0 $s0
+				#Entered objectInitEpilogue
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
 	jr	$ra	
-Main_init:
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for Object
+				#Entered codeObjInit for IO
+IO_init:
+				#Entered objectInitPrologue
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
 	sw	$s0 8($sp)
 	sw	$ra 4($sp)
-	addiu	$fp $sp 4
+	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Leaving objectInitPrologue
 	jal	Object_init
 	move	$a0 $s0
+				#Entered objectInitEpilogue
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
 	jr	$ra	
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for IO
+				#Entered codeObjInit for Int
+Int_init:
+				#Entered objectInitPrologue
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Leaving objectInitPrologue
+	jal	Object_init
+	move	$a0 $s0
+				#Entered objectInitEpilogue
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for Int
+				#Entered codeObjInit for Bool
+Bool_init:
+				#Entered objectInitPrologue
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Leaving objectInitPrologue
+	jal	Object_init
+	move	$a0 $s0
+				#Entered objectInitEpilogue
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for Bool
+				#Entered codeObjInit for String
+String_init:
+				#Entered objectInitPrologue
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Leaving objectInitPrologue
+	jal	Object_init
+	move	$a0 $s0
+				#Entered objectInitEpilogue
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for String
+				#Entered codeObjInit for A
 A_init:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
+				#Entered objectInitPrologue
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 16
 	move	$s0 $a0
-	sw	$s1 0($fp)
+				#Leaving objectInitPrologue
 	jal	Object_init
-	lw	$s1 12($s0)
+				#Generating code for attribute x of type Int in class A
+				#Entered cgen for addition
+				#Entered cgen for object: x
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
 	la	$a0 int_const0
+				#Leaving cgen for int const expression
 	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
 	lw	$t2 12($a0)
-	lw	$t1 12($s1)
 	add	$t1 $t1 $t2
 	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
 	sw	$a0 12($s0)
+				# Done Generating code for attribute x of type Int in class A
 	move	$a0 $s0
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 16
-	jr	$ra	
-String_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Object_init
-	move	$a0 $s0
+				#Entered objectInitEpilogue
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
 	jr	$ra	
-Bool_init:
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for A
+				#Entered codeObjInit for Main
+Main_init:
+				#Entered objectInitPrologue
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
 	sw	$s0 8($sp)
 	sw	$ra 4($sp)
-	addiu	$fp $sp 4
+	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Leaving objectInitPrologue
 	jal	Object_init
 	move	$a0 $s0
+				#Entered objectInitEpilogue
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
 	jr	$ra	
-Int_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
+				#Leaving objectInitEpilogue
+				#Leaving codeObjInit for Main
+				#Entered codeClassMethods for A
+				#Generating code for method printX in class A
+A.printX:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
 	move	$s0 $a0
-	jal	Object_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-IO_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Object_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Main.main:
-	addiu	$sp $sp -20
-	sw	$fp 20($sp)
-	sw	$s0 16($sp)
-	sw	$ra 12($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 4($fp)
-	sw	$s2 0($fp)
-	la	$a0 A_protObj
+				#Generating inner code for method printX with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class IO
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const1
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for new
+	la	$a0 IO_protObj
 	jal	Object.copy
-	jal	A_init
-	move	$s2 $a0
-	move	$s1 $zero
-	move	$a0 $s2
+	jal	IO_init
+				#Leaving cgen for new
 	bne	$a0 $zero label0
 	la	$a0 str_const0
-	li	$t1 25
+	li	$t1 1
 	jal	_dispatch_abort
 label0:
 	lw	$t1 8($a0)
 	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s2
+	jalr	$t1
+				#DONE dispatch for method out_string in class IO
+				#BEGIN dispatch for method out_int in class IO
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for object: x
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for new
+	la	$a0 IO_protObj
+	jal	Object.copy
+	jal	IO_init
+				#Leaving cgen for new
 	bne	$a0 $zero label1
 	la	$a0 str_const0
-	li	$t1 26
+	li	$t1 1
 	jal	_dispatch_abort
 label1:
 	lw	$t1 8($a0)
-	lw	$t1 20($t1)
-	jalr		$t1
-	move	$a0 $s2
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method out_int in class IO
+				#BEGIN dispatch for method out_string in class IO
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const2
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for new
+	la	$a0 IO_protObj
+	jal	Object.copy
+	jal	IO_init
+				#Leaving cgen for new
 	bne	$a0 $zero label2
 	la	$a0 str_const0
-	li	$t1 27
+	li	$t1 1
 	jal	_dispatch_abort
 label2:
 	lw	$t1 8($a0)
-	lw	$t1 20($t1)
-	jalr		$t1
-	move	$a0 $s2
-	bne	$a0 $zero label3
-	la	$a0 str_const0
-	li	$t1 28
-	jal	_dispatch_abort
-label3:
-	lw	$t1 8($a0)
-	lw	$t1 20($t1)
-	jalr		$t1
-	move	$a0 $s2
-	bne	$a0 $zero label4
-	la	$a0 str_const0
-	li	$t1 29
-	jal	_dispatch_abort
-label4:
-	lw	$t1 8($a0)
 	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s2
-	bne	$a0 $zero label5
-	la	$a0 str_const0
-	li	$t1 30
-	jal	_dispatch_abort
-label5:
-	lw	$t1 8($a0)
-	lw	$t1 16($t1)
-	jalr		$t1
-	move	$s1 $a0
-	move	$a0 $s1
-	bne	$a0 $zero label6
-	la	$a0 str_const0
-	li	$t1 31
-	jal	_dispatch_abort
-label6:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s2
-	bne	$a0 $zero label7
-	la	$a0 str_const0
-	li	$t1 32
-	jal	_dispatch_abort
-label7:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$s1 4($fp)
-	lw	$s2 0($fp)
-	lw	$fp 20($sp)
-	lw	$s0 16($sp)
-	lw	$ra 12($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-A.printX:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	la	$a0 IO_protObj
-	jal	Object.copy
-	jal	IO_init
-	bne	$a0 $zero label8
-	la	$a0 str_const0
-	li	$t1 7
-	jal	_dispatch_abort
-label8:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 12($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	la	$a0 IO_protObj
-	jal	Object.copy
-	jal	IO_init
-	bne	$a0 $zero label9
-	la	$a0 str_const0
-	li	$t1 8
-	jal	_dispatch_abort
-label9:
-	lw	$t1 8($a0)
-	lw	$t1 16($t1)
-	jalr		$t1
-	la	$a0 str_const2
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	la	$a0 IO_protObj
-	jal	Object.copy
-	jal	IO_init
-	bne	$a0 $zero label10
-	la	$a0 str_const0
-	li	$t1 9
-	jal	_dispatch_abort
-label10:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
+	jalr	$t1
+				#DONE dispatch for method out_string in class IO
+				#Leaving cgen for block
+				#Done Generating inner code for method printX with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
+	addiu	$sp $sp 4
 	jr	$ra	
+				#Generating code for method new_st in class A
 A.new_st:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
 	move	$s0 $a0
-	sw	$s1 0($fp)
-	la	$t1 class_objTab
-	lw	$t2 0($s0)
-	sll	$t2 $t2 3
-	addu	$t1 $t1 $t2
-	move	$s1 $t1
-	lw	$a0 0($t1)
+				#Generating inner code for method new_st with AR_size of 12
+				#Entered cgen for new
+	la	$a0 SELF_TYPE_protObj
 	jal	Object.copy
-	lw	$t1 4($s1)
-	jalr		$t1
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 16
+	jal	SELF_TYPE_init
+				#Leaving cgen for new
+				#Done Generating inner code for method new_st with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
 	jr	$ra	
+				#Generating code for method bump in class A
 A.bump:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
 	move	$s0 $a0
-	sw	$s1 0($fp)
-	lw	$s1 12($s0)
+				#Generating inner code for method bump with AR_size of 12
+				#Entered cgen for assign
+				#Entered cgen for addition
+				#Entered cgen for object: x
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
 	la	$a0 int_const0
+				#Leaving cgen for int const expression
 	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
 	lw	$t2 12($a0)
-	lw	$t1 12($s1)
 	add	$t1 $t1 $t2
 	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
 	sw	$a0 12($s0)
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 16
+				#Leaving cgen for assign
+				#Done Generating inner code for method bump with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
 	jr	$ra	
+				#Leaving codeClassMethods for A
+				#Entered codeClassMethods for Main
+				#Generating code for method main in class Main
+Main.main:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method main with AR_size of 12
+				#Done Generating inner code for method main with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for Main
+
+# end of generated code

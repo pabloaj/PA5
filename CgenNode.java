@@ -1,32 +1,33 @@
 /*
-Copyright (c) 2000 The Regents of the University of California.
-All rights reserved.
+   Copyright (c) 2000 The Regents of the University of California.
+   All rights reserved.
 
-Permission to use, copy, modify, and distribute this software for any
-purpose, without fee, and without written agreement is hereby granted,
-provided that the above copyright notice and the following two
-paragraphs appear in all copies of this software.
+   Permission to use, copy, modify, and distribute this software for any
+   purpose, without fee, and without written agreement is hereby granted,
+   provided that the above copyright notice and the following two
+   paragraphs appear in all copies of this software.
 
-IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
-DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT
-OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF
-CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+   IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR
+   DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT
+   OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF
+   CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
-INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS FOR A PARTICULAR PURPOSE.  THE SOFTWARE PROVIDED HEREUNDER IS
-ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATION TO
-PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
-*/
+   THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES,
+   INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+   AND FITNESS FOR A PARTICULAR PURPOSE.  THE SOFTWARE PROVIDED HEREUNDER IS
+   ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATION TO
+   PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+   */
 
 // This is a project skeleton file
 
 import java.io.PrintStream;
 import java.util.Vector;
 import java.util.Enumeration;
-import java.util.*;
+import java.util.*; // for map and stuff
 
-class CgenNode extends class_ {
+class CgenNode extends class_c {
+
     /** The parent of this node in the inheritance tree */
     private CgenNode parent;
 
@@ -38,13 +39,19 @@ class CgenNode extends class_ {
 
     /** Indicates a class that came from a Cool program */
     final static int NotBasic = 1;
-    
+
     /** Does this node correspond to a basic class? */
     private int basic_status;
 
- private LinkedList<AbstractSymbol> methodList; // list of all methods in the current CgenNode
+    /** PRIVATE HELPER VARIABLES WE ADDED */
+    private LinkedList<AbstractSymbol> methodList; // list of all methods in the current CgenNode
     private HashMap<AbstractSymbol, AbstractSymbol> methodClass; // find class of a method
-       public static Map<AbstractSymbol, Map<AbstractSymbol, Integer>> attrOffsetMap = new HashMap<AbstractSymbol, Map<AbstractSymbol, Integer>>();
+    //private HashMap<AbstractSymbol, Integer> methodOffset; // find offset of a method
+    /** Map from Class to Offset to the dispatch table */
+    //private Map<AbstractSymbol, Integer> methodMap;
+    //private static Map<AbstractSymbol, Map<AbstractSymbol, Integer>> methodOffsetMap;
+
+    public static Map<AbstractSymbol, Map<AbstractSymbol, Integer>> attrOffsetMap = new HashMap<AbstractSymbol, Map<AbstractSymbol, Integer>>();
 
     /** record the containing Type its in */
     private static AbstractSymbol currentType;
@@ -63,7 +70,39 @@ class CgenNode extends class_ {
             System.out.println(methodClass.get(name) + "." +name+"="+methodList.indexOf(name));
         }
     }
- //static variable that generates class tags
+
+    //public static int getMethodOffset(AbstractSymbol class_name, AbstractSymbol method_name) {
+    //    Map<AbstractSymbol, Integer> methodOffset = methodOffsetMap.get(class_name);
+    //    if(methodOffset == null) {
+    //        System.out.println("no such class name "+class_name+" exists:");
+    //    }
+    //    Integer off = methodOffset.get(method_name); 
+    //    if(off==null) {
+    //        System.out.println("no such method name "+method_name+" exists in class "+class_name);
+    //    }
+    //    return off;
+    //}
+    //public void printMethodMap() {
+    //    System.out.println("Printing method map");
+    //    Iterator it = methodMap.entrySet().iterator();
+    //    while(it.hasNext()) {
+    //        Map.Entry pairs= (Map.Entry) it.next();
+    //        System.out.println(pairs.getKey() + " = " + pairs.getValue());
+    //        it.remove();
+    //    }
+    //}
+
+    //public Integer getMethodIndex(AbstractSymbol method_name) {
+    //    System.out.println("getMethodIndex on " + method_name);
+    //    System.out.println("the method map: "+ methodMap.get(method_name));
+    //    return 1;
+    //    //return this.methodMap.get(method_name);
+    //}
+
+    // Queue of atrributes used when creating prototype object
+
+
+    //static variable that generates class tags
     public final static int OBJECT_CLASS_TAG = 0;
     public final static int IO_CLASS_TAG = 1;
     public final static int INT_CLASS_TAG = 2;
@@ -80,13 +119,12 @@ class CgenNode extends class_ {
     //a reference to the CgenClassTable
     private CgenClassTable cgenTable;
 
-///////////////////////////////////////////////////////////////////////
+
     /** Constructs a new CgenNode to represent class "c".
      * @param c the class
      * @param basic_status is this class basic or not
      * @param table the class table
      * */
-
     CgenNode(Class_ c, int basic_status, CgenClassTable table) {
         super(0, c.getName(), c.getParent(), c.getFeatures(), c.getFilename());
         this.parent = null;
@@ -113,44 +151,49 @@ class CgenNode extends class_ {
     }
 
     void addChild(CgenNode child) {
-	children.addElement(child);
+        children.addElement(child);
     }
 
     /** Gets the children of this class
      * @return the children
      * */
     Enumeration getChildren() {
-	return children.elements(); 
+        return children.elements(); 
     }
 
     /** Sets the parent of this class.
      * @param parent the parent
      * */
     void setParentNd(CgenNode parent) {
-	if (this.parent != null) {
-	    Utilities.fatalError("parent already set in CgenNode.setParent()");
-	}
-	if (parent == null) {
-	    Utilities.fatalError("null parent in CgenNode.setParent()");
-	}
-	this.parent = parent;
+        if (this.parent != null) {
+            Utilities.fatalError("parent already set in CgenNode.setParent()");
+        }
+        if (parent == null) {
+            Utilities.fatalError("null parent in CgenNode.setParent()");
+        }
+        this.parent = parent;
     }    
-	
+
 
     /** Gets the parent of this class
      * @return the parent
      * */
     CgenNode getParentNd() {
-	return parent; 
+        return parent; 
     }
 
     /** Returns true is this is a basic class.
      * @return true or false
      * */
     boolean basic() { 
-	return basic_status == Basic; 
+        return basic_status == Basic; 
     }
-      public int getTag(){
+
+    // functions I added
+    //
+    //
+
+    public int getTag(){
         return this.tag;
     }
 
@@ -484,6 +527,9 @@ class CgenNode extends class_ {
         CgenSupport.emitComment(str, "Leaving objectInitEpilogue");
     }
 
+    /**
+     * emits code for object initializer
+     */
     public void codeObjInit(PrintStream str) {
         CgenSupport.emitComment(str, "Entered codeObjInit for " + this.name);
         str.print(this.getName() + CgenSupport.CLASSINIT_SUFFIX + CgenSupport.LABEL);
@@ -497,6 +543,7 @@ class CgenNode extends class_ {
         }
 
         if(this.name.equals(TreeConstants.Bool) || this.name.equals(TreeConstants.Str) || this.name.equals(TreeConstants.Int)){
+            //do nothing with the attributes
         }   else {
             for(Enumeration e = getFeatures().getElements() ; e.hasMoreElements() ; ) {
                 Feature feat = (Feature) e.nextElement();
@@ -514,13 +561,18 @@ class CgenNode extends class_ {
             }
         }
 
+        // move $a0 $s0
         CgenSupport.emitMove(CgenSupport.ACC, CgenSupport.SELF, str);
         popObjectInitEpilogue(str);
         CgenSupport.emitComment(str, "Leaving codeObjInit for " + this.name);
     }
 
 
+    /**
+     * emits code for class methods 
+     */
     public void codeClassMethods(PrintStream str) {
+        // no need to code methods for Int, Bool, String
         this.currentType = this.getName();
         if(this.basic()) {
             return;
@@ -532,17 +584,21 @@ class CgenNode extends class_ {
                 this.cgenTable.enterScope();
                 method met = (method) feat;
                 CgenSupport.emitComment(str, "Generating code for method " + met.name  +  " in class " + this.name);
+                //System.out.println("Method " + met.name + " in class " + this.name + " has " + met.formals.getLength() + " arguments");
                 str.print(this.getName()+CgenSupport.METHOD_SEP+met.name+CgenSupport.LABEL);
+                // dispatch should have saved its actuals, so we consider this offset
                 int offsetFormals = CgenSupport.WORD_SIZE*(met.formals.getLength() + 1);
                 CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, -offsetFormals,str);
+                //push fp, so, and ra in that order
                 CgenSupport.emitPush(CgenSupport.FP, str);
                 CgenSupport.emitPush(CgenSupport.SELF, str);
                 CgenSupport.emitPush(CgenSupport.RA, str);
 
+                //move frame pointer to point to top of current activation frame and save current self object
                 CgenSupport.emitAddiu(CgenSupport.FP, CgenSupport.SP, 16, str);
                 CgenSupport.emitMove(CgenSupport.SELF, CgenSupport.ACC, str);
 
-               
+                //add formal parameter order to label to be able to calculate frame offsets ]
                 int i = 1;
                 for(Enumeration e2 = met.formals.getElements(); e2.hasMoreElements(); ) {
                     formalc formy = (formalc) e2.nextElement();
@@ -555,16 +611,17 @@ class CgenNode extends class_ {
                 met.expr.code(str, this.cgenTable);
                 CgenSupport.emitComment(str, "Done Generating inner code for method " + met.name +" with AR_size of " + AR_size);
 
+                //restore fp, so, ra
                 CgenSupport.emitComment(str, "Incrementing Stack pointer and Restoring FP, SELF, and then jumping");
 
                 CgenSupport.emitLoad(CgenSupport.FP, 3, CgenSupport.SP, str);
                 CgenSupport.emitLoad(CgenSupport.SELF, 2, CgenSupport.SP, str);
                 CgenSupport.emitLoad(CgenSupport.RA, 1, CgenSupport.SP, str);
-               
+                //pop the frame by incrementing the stack pointer
                 CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, AR_size, str);
-               
+                // now pop the arguments saved by dispatch
                 CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, offsetFormals,str);
-               
+                //return to caller
                 CgenSupport.emitReturn(str);
 
                 this.cgenTable.exitScope();
@@ -578,10 +635,3 @@ class CgenNode extends class_ {
     }
 }
 
-
-
-    
-//function add  i
-
-
-    
