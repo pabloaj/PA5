@@ -1,0 +1,6 @@
+6c6,8
+< 2
+---
+> The following symbols are undefined:
+> SELF_TYPE_init
+> SELF_TYPE_protObj

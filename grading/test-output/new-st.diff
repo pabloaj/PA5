@@ -1,0 +1,9 @@
+6,9c6,8
+< x is 1
+< x is 4
+< x is 1
+< x is 4
+---
+> The following symbols are undefined:
+> SELF_TYPE_init
+> SELF_TYPE_protObj

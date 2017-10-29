@@ -1,0 +1,12 @@
+6,12c6,8
+< 1
+< 2
+< 3
+< 4
+< 5
+< 6
+< COOL program successfully executed
+---
+> The following symbols are undefined:
+> Main.main
+> Main.recite
