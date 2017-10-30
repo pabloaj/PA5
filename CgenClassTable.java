@@ -52,8 +52,6 @@ class CgenClassTable extends SymbolTable {
         return classTagMap.get(class_name);
     }
 
-    // The following methods emit code for constants and global
-    // declarations.
 
     /** Emits code to start the .data segment and to
      * declare the global names.
@@ -203,12 +201,7 @@ class CgenClassTable extends SymbolTable {
                         filename),
                     CgenNode.Basic, this));
 
-        // The Object class has no parent class. Its methods are
-        //        cool_abort() : Object    aborts the program
-        //        type_name() : Str        returns a string representation 
-        //                                 of class name
-        //        copy() : SELF_TYPE       returns a copy of the object
-
+    
         class_c Object_class = 
             new class_c(0, 
                     TreeConstants.Object_, 
@@ -354,11 +347,6 @@ class CgenClassTable extends SymbolTable {
         installClass(new CgenNode(Str_class, CgenNode.Basic, this));
     }
 
-    // The following creates an inheritance graph from
-    // a list of classes.  The graph is implemented as
-    // a tree of `CgenNode', and class names are placed
-    // in the base class symbol table.
-
     private void installClass(CgenNode nd) {
         AbstractSymbol name = nd.getName();
         if (probe(name) != null) return;
@@ -386,7 +374,8 @@ class CgenClassTable extends SymbolTable {
     }
 
     /** Constructs a new class table and invokes the code generator */
-    public CgenClassTable(Classes cls, PrintStream str) {
+    public CgenClassTable(Classes cls, PrintStream str) 
+    {
         nds = new Vector();
 
         this.str = str;
@@ -412,9 +401,11 @@ class CgenClassTable extends SymbolTable {
 
     /** This method is the meat of the code generator.  It is to be
       filled in programming assignment 5 */
-    public void code() {
-        //classTagMap = new HashMap<AbstractSymbol, Integer>();
-        for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
+    public void code() 
+    {
+    
+        for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) 
+        {
             CgenNode tmpNode = (CgenNode) en.nextElement();
             classTagMap.put(tmpNode.name, tmpNode.getTag());
         }
@@ -434,33 +425,30 @@ class CgenClassTable extends SymbolTable {
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
             ((CgenNode) en.nextElement()).codeNameTab(str);
         }
-        //  class ObjectTable
+       
+
         str.print(CgenSupport.CLASSOBJTAB + CgenSupport.LABEL);
-        for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
+        for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) 
+        {
             ((CgenNode) en.nextElement()).codeClassObjTab(str);
         }
-        // parentTab
+        
         str.println("class_parentTab:");
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
             ((CgenNode) en.nextElement()).codeParentTables(str);
         }
 
-        // attrTabTab
         str.println("class_attrTabTab:");
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
             ((CgenNode) en.nextElement()).codeAttrTableTables(str);
         }
 
-        // Class attrTab
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
             ((CgenNode) en.nextElement()).codeAttrTables(str);
         }
         //                   - dispatch tables
         root().buildDispatchTables(str, new LinkedList<AbstractSymbol>(), new HashMap<AbstractSymbol, AbstractSymbol>());
         //                   - prototype objects
-        //for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
-        //    ((CgenNode) en.nextElement()).codeProtObj(str);
-        //}
         root().codeObjProt(str);
         
 
@@ -469,12 +457,13 @@ class CgenClassTable extends SymbolTable {
 
         //                 Add your code to emit
         //                   - object initializer
-        for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
+        for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) 
+        {
             CgenNode tmp = (CgenNode) en.nextElement();
             this.addId(TreeConstants.self, tmp);
             tmp.codeObjInit(str);
         }
-        //                   - the class methods
+        
         for( Enumeration en = nds.elements(); en.hasMoreElements() ; ) {
             CgenNode tmp = (CgenNode) en.nextElement();
             this.addId(TreeConstants.self, tmp);

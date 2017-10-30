@@ -11,19 +11,11 @@
 	.globl	_bool_tag
 	.globl	_string_tag
 _int_tag:
-<<<<<<< HEAD
 	.word	2
 _bool_tag:
 	.word	3
 _string_tag:
 	.word	4
-=======
-	.word	0
-_bool_tag:
-	.word	0
-_string_tag:
-	.word	0
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.globl	_MemMgr_INITIALIZER
 _MemMgr_INITIALIZER:
 	.word	_NoGC_Init
@@ -35,261 +27,158 @@ _MemMgr_TEST:
 	.word	0
 	.word	-1
 str_const16:
-<<<<<<< HEAD
 	.word	4
 	.word	5
 	.word	String_dispTab
-=======
-	.word	0
-	.word	5
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const2
 	.byte	0	
 	.align	2
 	.word	-1
 str_const15:
-<<<<<<< HEAD
 	.word	4
 	.word	6
 	.word	String_dispTab
-=======
-	.word	0
-	.word	6
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const3
 	.ascii	"Main"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const14:
-<<<<<<< HEAD
 	.word	4
 	.word	6
 	.word	String_dispTab
-=======
-	.word	0
-	.word	6
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const3
 	.ascii	"Bazz"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const13:
-<<<<<<< HEAD
 	.word	4
 	.word	6
 	.word	String_dispTab
-=======
-	.word	0
-	.word	6
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const3
 	.ascii	"Razz"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const12:
-<<<<<<< HEAD
 	.word	4
 	.word	5
 	.word	String_dispTab
-=======
-	.word	0
-	.word	5
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const4
 	.ascii	"Bar"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const11:
-<<<<<<< HEAD
 	.word	4
 	.word	5
 	.word	String_dispTab
-=======
-	.word	0
-	.word	5
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const4
 	.ascii	"Foo"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const10:
-<<<<<<< HEAD
 	.word	4
 	.word	6
 	.word	String_dispTab
-=======
-	.word	0
-	.word	6
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const5
 	.ascii	"String"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const9:
-<<<<<<< HEAD
 	.word	4
 	.word	6
 	.word	String_dispTab
-=======
-	.word	0
-	.word	6
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const3
 	.ascii	"Bool"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const8:
-<<<<<<< HEAD
 	.word	4
 	.word	5
 	.word	String_dispTab
-=======
-	.word	0
-	.word	5
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const4
 	.ascii	"Int"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const7:
-<<<<<<< HEAD
 	.word	4
 	.word	5
 	.word	String_dispTab
-=======
-	.word	0
-	.word	5
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const0
 	.ascii	"IO"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const6:
-<<<<<<< HEAD
 	.word	4
 	.word	6
 	.word	String_dispTab
-=======
-	.word	0
-	.word	6
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const5
 	.ascii	"Object"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const5:
-<<<<<<< HEAD
 	.word	4
 	.word	7
 	.word	String_dispTab
-=======
-	.word	0
-	.word	7
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const6
 	.ascii	"_prim_slot"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const4:
-<<<<<<< HEAD
 	.word	4
 	.word	7
 	.word	String_dispTab
-=======
-	.word	0
-	.word	7
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const7
 	.ascii	"SELF_TYPE"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const3:
-<<<<<<< HEAD
 	.word	4
 	.word	7
 	.word	String_dispTab
-=======
-	.word	0
-	.word	7
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const7
 	.ascii	"_no_class"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const2:
-<<<<<<< HEAD
 	.word	4
 	.word	8
 	.word	String_dispTab
-=======
-	.word	0
-	.word	8
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const8
 	.ascii	"<basic class>"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const1:
-<<<<<<< HEAD
 	.word	4
 	.word	7
 	.word	String_dispTab
-=======
-	.word	0
-	.word	7
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const6
 	.ascii	"do nothing"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const0:
-<<<<<<< HEAD
 	.word	4
 	.word	8
 	.word	String_dispTab
-=======
-	.word	0
-	.word	8
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	int_const9
 	.ascii	"./hairyscary.cl"
 	.byte	0	
 	.align	2
 	.word	-1
 int_const9:
-<<<<<<< HEAD
 	.word	2
 	.word	4
 	.word	Int_dispTab
@@ -359,89 +248,38 @@ bool_const1:
 	.word	3
 	.word	4
 	.word	Bool_dispTab
-=======
-	.word	0
-	.word	4
-	.word	
-	.word	15
-	.word	-1
-int_const8:
-	.word	0
-	.word	4
-	.word	
-	.word	13
-	.word	-1
-int_const7:
-	.word	0
-	.word	4
-	.word	
-	.word	9
-	.word	-1
-int_const6:
-	.word	0
-	.word	4
-	.word	
-	.word	10
-	.word	-1
-int_const5:
-	.word	0
-	.word	4
-	.word	
-	.word	6
-	.word	-1
-int_const4:
-	.word	0
-	.word	4
-	.word	
-	.word	3
-	.word	-1
-int_const3:
-	.word	0
-	.word	4
-	.word	
-	.word	4
-	.word	-1
-int_const2:
-	.word	0
-	.word	4
-	.word	
-	.word	0
-	.word	-1
-int_const1:
-	.word	0
-	.word	4
-	.word	
-	.word	1
-	.word	-1
-int_const0:
-	.word	0
-	.word	4
-	.word	
-	.word	2
-	.word	-1
-bool_const0:
-	.word	0
-	.word	4
-	.word	
-	.word	0
-	.word	-1
-bool_const1:
-	.word	0
-	.word	4
-	.word	
->>>>>>> 2219320b06bf38ac8c499bde7d4ee7e20fe524e5
 	.word	1
 class_nameTab:
+				#Entered codeNameTab
 	.word	str_const6
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const7
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const8
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const9
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const10
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const11
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const12
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const13
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const14
+				#Leaving codeNameTab
+				#Entered codeNameTab
 	.word	str_const15
+				#Leaving codeNameTab
 class_objTab:
 	.word	Object_protObj
 	.word	Object_init
