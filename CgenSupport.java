@@ -530,7 +530,23 @@ class CgenSupport {
     }
 
     /****************************************************************/
+    public static void emitEnterFunc(int size, PrintStream s) {
+        emitAddiu(SP, SP, -(size + DEFAULT_OBJFIELDS) * WORD_SIZE, s);
+        emitStore(FP, 3 + size, SP, s);
+        emitStore(SELF, 2 + size, SP, s);
+        emitStore(RA, 1 + size, SP, s);
+        emitAddiu(FP, SP, WORD_SIZE, s);
+        emitMove(SELF, ACC, s);
+    }
 
+    public static void emitExitFunc(int size, int tempVarNumber, PrintStream s) {
+        emitLoad(FP, 3 + tempVarNumber , SP, s);
+        emitLoad(SELF, 2 + tempVarNumber, SP, s);
+        emitLoad(RA, 1 + tempVarNumber, SP, s);
+        emitAddiu(SP, SP, (3 + size + tempVarNumber) * WORD_SIZE, s);
+        emitReturn(s);
+    }
+    /****************************************************************/
     
 
     /** Emits code to check the garbage collector 

@@ -1,11 +1,9 @@
-6,9c6,10
+6,9c6,8
 < 13
 < 20
 < 22
 < COOL program successfully executed
 ---
-> The following symbols are undefined:
-> Main.main
-> Main.g
-> Instruction references undefined symbol at 0x00400038
-> [0x00400038]	0x0c000000  jal 0x00000000 [Main.main]      ; 373: jal	Main.main		# Invoke main method
+> Exception occurred at PC=0x0040149c
+>   Bad address in data/stack read: 0x0000000c
+>   Exception 7  [Bad address in data/stack read]  Execution aborted

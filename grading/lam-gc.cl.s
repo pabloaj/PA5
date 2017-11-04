@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -1878,3 +1877,2278 @@ VarList.add:
 	addiu	$sp $sp -4
 	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Generating inner code for method add with AR_size of 16
+				#BEGIN dispatch for method init in class VarListNE
+				#Evaluating and pushing argument of type Variable to current frame
+				#Entered cgen for object: x
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Variable to current frame
+				#Evaluating and pushing argument of type SELF_TYPE to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type SELF_TYPE to current frame
+				#Entered cgen for new
+	la	$a0 VarListNE_protObj
+	jal	Object.copy
+	jal	VarListNE_init
+				#Leaving cgen for new
+	bne	$a0 $zero label2
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label2:
+	lw	$t1 8($a0)
+	lw	$t1 48($t1)
+	jalr	$t1
+				#DONE dispatch for method init in class VarListNE
+				#Done Generating inner code for method add with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method print in class VarList
+VarList.print:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method print with AR_size of 12
+				#BEGIN dispatch for method out_string in class VarList
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const1
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label3
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label3:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class VarList
+				#Done Generating inner code for method print with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for VarList
+				#Entered codeClassMethods for VarListNE
+				#Generating code for method isNil in class VarListNE
+VarListNE.isNil:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method isNil with AR_size of 12
+				#Entered cgen for bool const expression
+	la	$a0 bool_const0
+				#Leaving cgen for bool const expression
+				#Done Generating inner code for method isNil with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method head in class VarListNE
+VarListNE.head:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method head with AR_size of 12
+				#Entered cgen for object: x
+	lw	$a0 12($s0)
+				#Exited cgen for object
+				#Done Generating inner code for method head with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method tail in class VarListNE
+VarListNE.tail:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method tail with AR_size of 12
+				#Entered cgen for object: rest
+	lw	$a0 16($s0)
+				#Exited cgen for object
+				#Done Generating inner code for method tail with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method init in class VarListNE
+VarListNE.init:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method init with AR_size of 20
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for object: y
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for object: r
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method init with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method print in class VarListNE
+VarListNE.print:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method print with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method print_self in class Variable
+				#Entered cgen for object: x
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label4
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label4:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method print_self in class Variable
+				#BEGIN dispatch for method out_string in class VarListNE
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const2
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label5
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label5:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class VarListNE
+				#BEGIN dispatch for method print in class VarList
+				#Entered cgen for object: rest
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label6
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label6:
+	lw	$t1 8($a0)
+	lw	$t1 44($t1)
+	jalr	$t1
+				#DONE dispatch for method print in class VarList
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method print with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for VarListNE
+				#Entered codeClassMethods for LambdaList
+				#Generating code for method isNil in class LambdaList
+LambdaList.isNil:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method isNil with AR_size of 12
+				#Entered cgen for bool const expression
+	la	$a0 bool_const1
+				#Leaving cgen for bool const expression
+				#Done Generating inner code for method isNil with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headE in class LambdaList
+LambdaList.headE:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headE with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method abort in class LambdaList
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label7
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label7:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class LambdaList
+				#Entered cgen for new
+	la	$a0 VarList_protObj
+	jal	Object.copy
+	jal	VarList_init
+				#Leaving cgen for new
+				#Leaving cgen for block
+				#Done Generating inner code for method headE with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headC in class LambdaList
+LambdaList.headC:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headC with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method abort in class LambdaList
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label8
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label8:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class LambdaList
+				#Entered cgen for new
+	la	$a0 Lambda_protObj
+	jal	Object.copy
+	jal	Lambda_init
+				#Leaving cgen for new
+				#Leaving cgen for block
+				#Done Generating inner code for method headC with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headN in class LambdaList
+LambdaList.headN:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headN with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method abort in class LambdaList
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label9
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label9:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class LambdaList
+				#Entered cgen for int const expression
+	la	$a0 int_const1
+				#Leaving cgen for int const expression
+				#Leaving cgen for block
+				#Done Generating inner code for method headN with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method tail in class LambdaList
+LambdaList.tail:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method tail with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method abort in class LambdaList
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label10
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label10:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class LambdaList
+				#Entered cgen for new
+	la	$a0 LambdaList_protObj
+	jal	Object.copy
+	jal	LambdaList_init
+				#Leaving cgen for new
+				#Leaving cgen for block
+				#Done Generating inner code for method tail with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method add in class LambdaList
+LambdaList.add:
+	addiu	$sp $sp -16
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method add with AR_size of 24
+				#BEGIN dispatch for method init in class LambdaListNE
+				#Evaluating and pushing argument of type VarList to current frame
+				#Entered cgen for object: e
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type VarList to current frame
+				#Evaluating and pushing argument of type Lambda to current frame
+				#Entered cgen for object: x
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Lambda to current frame
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for object: n
+	lw	$a0 16($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Evaluating and pushing argument of type SELF_TYPE to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type SELF_TYPE to current frame
+				#Entered cgen for new
+	la	$a0 LambdaListNE_protObj
+	jal	Object.copy
+	jal	LambdaListNE_init
+				#Leaving cgen for new
+	bne	$a0 $zero label11
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label11:
+	lw	$t1 8($a0)
+	lw	$t1 36($t1)
+	jalr	$t1
+				#DONE dispatch for method init in class LambdaListNE
+				#Done Generating inner code for method add with AR_size of 24
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 24
+	addiu	$sp $sp 16
+	jr	$ra	
+				#Leaving codeClassMethods for LambdaList
+				#Entered codeClassMethods for LambdaListNE
+				#Generating code for method isNil in class LambdaListNE
+LambdaListNE.isNil:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method isNil with AR_size of 12
+				#Entered cgen for bool const expression
+	la	$a0 bool_const0
+				#Leaving cgen for bool const expression
+				#Done Generating inner code for method isNil with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headE in class LambdaListNE
+LambdaListNE.headE:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headE with AR_size of 12
+				#Entered cgen for object: env
+	lw	$a0 20($s0)
+				#Exited cgen for object
+				#Done Generating inner code for method headE with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headC in class LambdaListNE
+LambdaListNE.headC:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headC with AR_size of 12
+				#Entered cgen for object: lam
+	lw	$a0 12($s0)
+				#Exited cgen for object
+				#Done Generating inner code for method headC with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headN in class LambdaListNE
+LambdaListNE.headN:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headN with AR_size of 12
+				#Entered cgen for object: num
+	lw	$a0 16($s0)
+				#Exited cgen for object
+				#Done Generating inner code for method headN with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method tail in class LambdaListNE
+LambdaListNE.tail:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method tail with AR_size of 12
+				#Entered cgen for object: rest
+	lw	$a0 24($s0)
+				#Exited cgen for object
+				#Done Generating inner code for method tail with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method init in class LambdaListNE
+LambdaListNE.init:
+	addiu	$sp $sp -20
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method init with AR_size of 28
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for object: e
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 20($s0)
+	addiu	$a1 $s0 3
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for object: l
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for object: n
+	lw	$a0 16($fp)
+				#Exited cgen for object
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for object: r
+	lw	$a0 20($fp)
+				#Exited cgen for object
+	sw	$a0 24($s0)
+	addiu	$a1 $s0 4
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method init with AR_size of 28
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 28
+	addiu	$sp $sp 20
+	jr	$ra	
+				#Leaving codeClassMethods for LambdaListNE
+				#Entered codeClassMethods for LambdaListRef
+				#Generating code for method isNil in class LambdaListRef
+LambdaListRef.isNil:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method isNil with AR_size of 12
+				#BEGIN dispatch for method isNil in class LambdaList
+				#Entered cgen for object: l
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label12
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label12:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method isNil in class LambdaList
+				#Done Generating inner code for method isNil with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headE in class LambdaListRef
+LambdaListRef.headE:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headE with AR_size of 12
+				#BEGIN dispatch for method headE in class LambdaList
+				#Entered cgen for object: l
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label13
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label13:
+	lw	$t1 8($a0)
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method headE in class LambdaList
+				#Done Generating inner code for method headE with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headC in class LambdaListRef
+LambdaListRef.headC:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headC with AR_size of 12
+				#BEGIN dispatch for method headC in class LambdaList
+				#Entered cgen for object: l
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label14
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label14:
+	lw	$t1 8($a0)
+	lw	$t1 20($t1)
+	jalr	$t1
+				#DONE dispatch for method headC in class LambdaList
+				#Done Generating inner code for method headC with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method headN in class LambdaListRef
+LambdaListRef.headN:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method headN with AR_size of 12
+				#BEGIN dispatch for method headN in class LambdaList
+				#Entered cgen for object: l
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label15
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label15:
+	lw	$t1 8($a0)
+	lw	$t1 24($t1)
+	jalr	$t1
+				#DONE dispatch for method headN in class LambdaList
+				#Done Generating inner code for method headN with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method reset in class LambdaListRef
+LambdaListRef.reset:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method reset with AR_size of 12
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for int const expression
+	la	$a0 int_const1
+				#Leaving cgen for int const expression
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for new
+	la	$a0 LambdaList_protObj
+	jal	Object.copy
+	jal	LambdaList_init
+				#Leaving cgen for new
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method reset with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method add in class LambdaListRef
+LambdaListRef.add:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method add with AR_size of 20
+				#Entered cgen for block
+				#Entered cgen for assign
+				#BEGIN dispatch for method add in class LambdaList
+				#Evaluating and pushing argument of type VarList to current frame
+				#Entered cgen for object: env
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type VarList to current frame
+				#Evaluating and pushing argument of type Lambda to current frame
+				#Entered cgen for object: c
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Lambda to current frame
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for object: nextNum
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: l
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label16
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label16:
+	lw	$t1 8($a0)
+	lw	$t1 32($t1)
+	jalr	$t1
+				#DONE dispatch for method add in class LambdaList
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for addition
+				#Entered cgen for object: nextNum
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
+	la	$a0 int_const0
+				#Leaving cgen for int const expression
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	add	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for subtract
+				#Entered cgen for object: nextNum
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
+	la	$a0 int_const0
+				#Leaving cgen for int const expression
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	sub	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for subtract
+				#Leaving cgen for block
+				#Done Generating inner code for method add with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method removeHead in class LambdaListRef
+LambdaListRef.removeHead:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method removeHead with AR_size of 12
+				#Entered cgen for block
+				#Entered cgen for assign
+				#BEGIN dispatch for method tail in class LambdaList
+				#Entered cgen for object: l
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label17
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label17:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method tail in class LambdaList
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method removeHead with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for LambdaListRef
+				#Entered codeClassMethods for Expr
+				#Generating code for method print_self in class Expr
+Expr.print_self:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method print_self with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Expr
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const3
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label18
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label18:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Expr
+				#BEGIN dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label19
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label19:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method print_self with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method beta in class Expr
+Expr.beta:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method beta with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Expr
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const4
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label20
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label20:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Expr
+				#BEGIN dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label21
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label21:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method beta with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method substitute in class Expr
+Expr.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method substitute with AR_size of 20
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Expr
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const5
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label22
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label22:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Expr
+				#BEGIN dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label23
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label23:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method substitute with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method gen_code in class Expr
+Expr.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method gen_code with AR_size of 20
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Expr
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const6
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label24
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label24:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Expr
+				#BEGIN dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label25
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label25:
+	lw	$t1 8($a0)
+	lw	$t1 0($t1)
+	jalr	$t1
+				#DONE dispatch for method abort in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method gen_code with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Leaving codeClassMethods for Expr
+				#Entered codeClassMethods for Variable
+				#Generating code for method init in class Variable
+Variable.init:
+	addiu	$sp $sp -8
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method init with AR_size of 16
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for object: n
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method init with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method print_self in class Variable
+Variable.print_self:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method print_self with AR_size of 12
+				#BEGIN dispatch for method out_string in class Variable
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for object: name
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label26
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label26:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Variable
+				#Done Generating inner code for method print_self with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method beta in class Variable
+Variable.beta:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method beta with AR_size of 12
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Done Generating inner code for method beta with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method substitute in class Variable
+Variable.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method substitute with AR_size of 20
+				#Entered cgen for conditional
+				#Entering cgen for equal to
+				#Entered cgen for object: x
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	move	$t1 $a0
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	move	$t2 $a0
+	la	$a0 bool_const1
+	la	$a1 bool_const0
+	jal	equality_test
+label30:
+				#Leaving cgen for equal to
+	la	$t1 bool_const1
+	beq	$a0 $t1 label28
+label27:
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	b	label29
+label28:
+				#Entered cgen for object: e
+	lw	$a0 12($fp)
+				#Exited cgen for object
+label29:
+				#Leaving cgen for conditional
+				#Done Generating inner code for method substitute with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method gen_code in class Variable
+Variable.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method gen_code with AR_size of 20
+				#Done Generating inner code for method gen_code with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Leaving codeClassMethods for Variable
+				#Entered codeClassMethods for Lambda
+				#Generating code for method init in class Lambda
+Lambda.init:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method init with AR_size of 20
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for object: a
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for object: b
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method init with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method print_self in class Lambda
+Lambda.print_self:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method print_self with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const10
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label31
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label31:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method print_self in class Variable
+				#Entered cgen for object: arg
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label32
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label32:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method print_self in class Variable
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const11
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label33
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label33:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method print_self in class Expr
+				#Entered cgen for object: body
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label34
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label34:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method print_self in class Expr
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method print_self with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method beta in class Lambda
+Lambda.beta:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method beta with AR_size of 12
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Done Generating inner code for method beta with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method apply in class Lambda
+Lambda.apply:
+	addiu	$sp $sp -8
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method apply with AR_size of 16
+				#BEGIN dispatch for method substitute in class Expr
+				#Evaluating and pushing argument of type Variable to current frame
+				#Entered cgen for object: arg
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Variable to current frame
+				#Evaluating and pushing argument of type Expr to current frame
+				#Entered cgen for object: actual
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Expr to current frame
+				#Entered cgen for object: body
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label35
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label35:
+	lw	$t1 8($a0)
+	lw	$t1 36($t1)
+	jalr	$t1
+				#DONE dispatch for method substitute in class Expr
+				#Done Generating inner code for method apply with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method substitute in class Lambda
+Lambda.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method substitute with AR_size of 20
+				#Entered cgen for conditional
+				#Entering cgen for equal to
+				#Entered cgen for object: x
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	move	$t1 $a0
+				#Entered cgen for object: arg
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	move	$t2 $a0
+	la	$a0 bool_const1
+	la	$a1 bool_const0
+	jal	equality_test
+label39:
+				#Leaving cgen for equal to
+	la	$t1 bool_const1
+	beq	$a0 $t1 label37
+label36:
+	b	label38
+label37:
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+label38:
+				#Leaving cgen for conditional
+				#Done Generating inner code for method substitute with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method gen_code in class Lambda
+Lambda.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method gen_code with AR_size of 20
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const12
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label40
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label40:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_int in class Lambda
+				#Evaluating and pushing argument of type Int to current frame
+				#BEGIN dispatch for method add in class LambdaListRef
+				#Evaluating and pushing argument of type VarList to current frame
+				#Entered cgen for object: env
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type VarList to current frame
+				#Evaluating and pushing argument of type SELF_TYPE to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type SELF_TYPE to current frame
+				#Entered cgen for object: closures
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	bne	$a0 $zero label41
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label41:
+	lw	$t1 8($a0)
+	lw	$t1 32($t1)
+	jalr	$t1
+				#DONE dispatch for method add in class LambdaListRef
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label42
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label42:
+	lw	$t1 8($a0)
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method out_int in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const13
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label43
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label43:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#Entered cgen for conditional
+				#BEGIN dispatch for method isNil in class VarList
+				#Entered cgen for object: env
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	bne	$a0 $zero label47
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label47:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method isNil in class VarList
+	la	$t1 bool_const1
+	beq	$a0 $t1 label45
+label44:
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const15
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label48
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label48:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+	b	label46
+label45:
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const14
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label49
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label49:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+label46:
+				#Leaving cgen for conditional
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method gen_code with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method gen_closure_code in class Lambda
+Lambda.gen_closure_code:
+	addiu	$sp $sp -16
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method gen_closure_code with AR_size of 24
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const16
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label50
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label50:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_int in class Lambda
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for object: n
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label51
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label51:
+	lw	$t1 8($a0)
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method out_int in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const17
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label52
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label52:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const18
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label53
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label53:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const19
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label54
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label54:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_int in class Lambda
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for object: n
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label55
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label55:
+	lw	$t1 8($a0)
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method out_int in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const20
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label56
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label56:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const21
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label57
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label57:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method gen_code in class Expr
+				#Evaluating and pushing argument of type VarList to current frame
+				#BEGIN dispatch for method add in class VarList
+				#Evaluating and pushing argument of type Variable to current frame
+				#Entered cgen for object: arg
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Variable to current frame
+				#Entered cgen for object: env
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	bne	$a0 $zero label58
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label58:
+	lw	$t1 8($a0)
+	lw	$t1 40($t1)
+	jalr	$t1
+				#DONE dispatch for method add in class VarList
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type VarList to current frame
+				#Evaluating and pushing argument of type LambdaListRef to current frame
+				#Entered cgen for object: closures
+	lw	$a0 16($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type LambdaListRef to current frame
+				#Entered cgen for object: body
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label59
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label59:
+	lw	$t1 8($a0)
+	lw	$t1 40($t1)
+	jalr	$t1
+				#DONE dispatch for method gen_code in class Expr
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const22
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label60
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label60:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#BEGIN dispatch for method out_string in class Lambda
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const23
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label61
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label61:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Lambda
+				#Leaving cgen for block
+				#Done Generating inner code for method gen_closure_code with AR_size of 24
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 24
+	addiu	$sp $sp 16
+	jr	$ra	
+				#Leaving codeClassMethods for Lambda
+				#Entered codeClassMethods for App
+				#Generating code for method init in class App
+App.init:
+	addiu	$sp $sp -12
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method init with AR_size of 20
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for object: f
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 1
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for assign
+				#Entered cgen for object: a
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 2
+	jal	_GenGC_Assign
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method init with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method print_self in class App
+App.print_self:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method print_self with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method out_string in class App
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const24
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label62
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label62:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class App
+				#BEGIN dispatch for method print_self in class Expr
+				#Entered cgen for object: fun
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label63
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label63:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method print_self in class Expr
+				#BEGIN dispatch for method out_string in class App
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const25
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label64
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label64:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class App
+				#BEGIN dispatch for method print_self in class Expr
+				#Entered cgen for object: arg
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label65
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label65:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method print_self in class Expr
+				#BEGIN dispatch for method out_string in class App
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const26
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label66
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label66:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class App
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method print_self with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Generating code for method beta in class App
+App.beta:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method beta with AR_size of 12
+				#Entering cgen for case
+				#Entered cgen for object: fun
+	lw	$a0 12($s0)
+				#Exited cgen for object
+	bne	$a0 $zero label67
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_case_abort2
+label67:
+	li	$t1 10
+label68:
+	beq	$t1 -2 label70
+	li	$t2 12
+	bne	$t1 $t2 label71
+				#BEGIN dispatch for method apply in class Lambda
+				#Evaluating and pushing argument of type Expr to current frame
+				#Entered cgen for object: arg
+	lw	$a0 16($s0)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Expr to current frame
+				#Entered cgen for object: l

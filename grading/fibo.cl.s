@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -483,3 +482,199 @@ Main.fibo:
 	addiu	$sp $sp -4
 	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Generating inner code for method fibo with AR_size of 16
+				#Entered cgen for conditional
+				#Entering cgen for equal to
+				#Entered cgen for object: i
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	move	$t1 $a0
+				#Entered cgen for int const expression
+	la	$a0 int_const0
+				#Leaving cgen for int const expression
+	move	$t2 $a0
+	la	$a0 bool_const1
+	la	$a1 bool_const0
+	jal	equality_test
+label3:
+				#Leaving cgen for equal to
+	la	$t1 bool_const1
+	beq	$a0 $t1 label1
+label0:
+				#Entered cgen for conditional
+				#Entering cgen for equal to
+				#Entered cgen for object: i
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	move	$t1 $a0
+				#Entered cgen for int const expression
+	la	$a0 int_const1
+				#Leaving cgen for int const expression
+	move	$t2 $a0
+	la	$a0 bool_const1
+	la	$a1 bool_const0
+	jal	equality_test
+label7:
+				#Leaving cgen for equal to
+	la	$t1 bool_const1
+	beq	$a0 $t1 label5
+label4:
+				#Entered cgen for addition
+				#BEGIN dispatch for method fibo in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for subtract
+				#Entered cgen for object: i
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
+	la	$a0 int_const1
+				#Leaving cgen for int const expression
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	sub	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for subtract
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label8
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label8:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method fibo in class Main
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#BEGIN dispatch for method fibo in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for subtract
+				#Entered cgen for object: i
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
+	la	$a0 int_const2
+				#Leaving cgen for int const expression
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	sub	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for subtract
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label9
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label9:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method fibo in class Main
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	add	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
+	b	label6
+label5:
+				#Entered cgen for int const expression
+	la	$a0 int_const1
+				#Leaving cgen for int const expression
+label6:
+				#Leaving cgen for conditional
+	b	label2
+label1:
+				#Entered cgen for int const expression
+	la	$a0 int_const0
+				#Leaving cgen for int const expression
+label2:
+				#Leaving cgen for conditional
+				#Done Generating inner code for method fibo with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method main in class Main
+Main.main:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method main with AR_size of 12
+				#BEGIN dispatch for method out_int in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#BEGIN dispatch for method fibo in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const3
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label10
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label10:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method fibo in class Main
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label11
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label11:
+	lw	$t1 8($a0)
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method out_int in class Main
+				#Done Generating inner code for method main with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for Main

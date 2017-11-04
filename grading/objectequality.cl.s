@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -592,3 +591,50 @@ A.foo:
 	addiu	$sp $sp -4
 	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Generating inner code for method foo with AR_size of 16
+				#Entered cgen for block
+				#Entered cgen for assign
+				#Entered cgen for object: y
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 12($s0)
+				#Leaving cgen for assign
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method foo with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Leaving codeClassMethods for A
+				#Entered codeClassMethods for B
+				#Leaving codeClassMethods for B
+				#Entered codeClassMethods for Main
+				#Generating code for method main in class Main
+Main.main:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method main with AR_size of 12
+				#Entered cgen for block
+				#Leaving cgen for block
+				#Done Generating inner code for method main with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for Main

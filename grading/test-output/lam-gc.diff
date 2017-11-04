@@ -1,4 +1,4 @@
-6,534c6,65
+6,534c6,23
 < \x.x
 < \x.\y.x
 < \x.\y.\z.((((x)@(z)))@(((y)@(z))))
@@ -530,62 +530,20 @@
 < COOL program successfully executed
 ---
 > The following symbols are undefined:
-> Variable.gen_code
+> label70
+> label71
 > Main.closure_class
-> VarListNE.tail
-> Lambda.apply
-> LambdaListNE.init
-> Variable.print_self
 > Term.app
-> Lambda.init
-> VarListNE.head
 > App.substitute
-> LambdaListRef.removeHead
 > Main.gen_code
 > Main.main
-> Expr.print_self
-> Variable.beta
-> LambdaList.headC
-> LambdaList.headE
-> LambdaList.headN
 > App.gen_code
 > Term.var
-> Variable.substitute
-> LambdaListNE.headC
-> LambdaListNE.headE
-> LambdaListNE.headN
-> VarList.print
 > Main.beta_reduce
-> Lambda.print_self
-> LambdaListNE.tail
-> App.beta
-> LambdaList.isNil
-> VarListNE.init
-> Expr.substitute
-> Variable.init
 > Term.lam
-> VarListNE.isNil
-> LambdaListNE.isNil
-> Lambda.gen_closure_code
-> Lambda.gen_code
-> Expr.gen_code
-> LambdaListRef.reset
-> LambdaList.tail
-> LambdaListRef.headC
-> LambdaListRef.headE
-> LambdaListRef.headN
-> Expr.beta
 > Main.eval_class
-> App.init
-> Lambda.substitute
-> LambdaList.add
-> VarListNE.print
-> Lambda.beta
-> App.print_self
 > Term.i
 > Term.k
 > Term.s
-> LambdaListRef.add
-> LambdaListRef.isNil
 > Instruction references undefined symbol at 0x00400038
 > [0x00400038]	0x0c000000  jal 0x00000000 [Main.main]      ; 373: jal	Main.main		# Invoke main method

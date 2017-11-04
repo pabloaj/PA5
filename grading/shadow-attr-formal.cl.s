@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -518,3 +517,95 @@ Main.method:
 	addiu	$sp $sp -4
 	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Generating inner code for method method with AR_size of 16
+				#BEGIN dispatch for method out_string in class Main
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for object: var
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label0
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label0:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Main
+				#Done Generating inner code for method method with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method main in class Main
+Main.main:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method main with AR_size of 12
+				#Entered cgen for block
+				#BEGIN dispatch for method method in class Main
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const2
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label1
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label1:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method method in class Main
+				#BEGIN dispatch for method out_string in class Main
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const3
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label2
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label2:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Main
+				#Leaving cgen for block
+				#Done Generating inner code for method main with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for Main

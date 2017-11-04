@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab

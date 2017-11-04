@@ -1,12 +1,3 @@
-// -*- mode: java -*- 
-//
-// file: cool-tree.m4
-//
-// This file defines the AST
-//
-//////////////////////////////////////////////////////////
-
-
 
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -23,7 +14,6 @@ abstract class Program extends TreeNode {
     public abstract void dump_with_types(PrintStream out, int n);
     public abstract void semant();
     public abstract void cgen(PrintStream s);
-
 }
 
 
@@ -400,6 +390,36 @@ class method extends Feature {
         expr.dump_with_types(out, n + 2);
     }
 
+    public void code(PrintStream s, CgenClassTable cgenTable) 
+    {
+        int tempVarNumber = (Integer) cgenTable.probe(name);
+        int formalNumber = formals.getLength();
+        int stackSize = CgenSupport.DEFAULT_OBJFIELDS + tempVarNumber;
+
+        CgenNode nd = (CgenNode) cgenTable.lookup(TreeConstants.self);
+        
+        cgenTable.enterScope();
+        CgenSupport.emitMethodRef(nd.getName(), name, s);
+        s.print(CgenSupport.LABEL);
+        CgenSupport.emitEnterFunc(tempVarNumber, s); 
+        int formalCount = 0;
+        
+        for (Enumeration e = formals.getElements(); e.hasMoreElements();) 
+        {
+            formal f = (formal) e.nextElement();
+            formalCount++;
+            cgenTable.addId(f.name, new Integer(formalNumber - formalCount + stackSize));
+        }     
+
+        expr.code(s, cgenTable);
+        if (TreeConstants.SELF_TYPE.equals(expr.get_type()) && !(expr instanceof new_)) 
+        {
+            CgenSupport.emitMove(CgenSupport.ACC, CgenSupport.SELF, s);
+        }
+        CgenSupport.emitExitFunc(formalNumber, tempVarNumber, s);
+        cgenTable.exitScope();
+    }
+
 }
 
 
@@ -441,55 +461,6 @@ class attr extends Feature {
         dump_AbstractSymbol(out, n + 2, type_decl);
         init.dump_with_types(out, n + 2);
     }
-
-    public void code(PrintStream s, CgenClassTable cgenTable) 
-    {
-        //CgenSupport.emitComment(s, "Entered cgen for assign");
-
-        //expr.code(s, cgenTable);
-
-        //First check if this variable is in current scope
-        //if(cgenTable.probe(name) == null) 
-        //{
-            //not in current scope so it must be an attribute, so get offset of attribute
-            // and load into current scope
-        //    CgenNode nd = (CgenNode) cgenTable.lookup(TreeConstants.self);
-        //    int attrOffset = CgenNode.attrOffsetMap.get(nd.name).get(name);
-        //    CgenSupport.emitStore(CgenSupport.ACC, (2+attrOffset), CgenSupport.SELF, s);
-            // garbage collect
-        //    if (Flags.cgen_Memmgr != Flags.GC_NOGC) 
-        //    {
-        //        CgenSupport.emitAddiu(CgenSupport.A1, CgenSupport.SELF, attrOffset,s);
-        //        CgenSupport.emitJal("_GenGC_Assign", s);
-        //    }
-        //} 
-        //else {
-            //is in the current scope, so get offset in frame and load into $a0
-        //    int frameOffset = (Integer) cgenTable.probe(name);
-        //    CgenSupport.emitStore(CgenSupport.ACC, frameOffset, CgenSupport.FP, s);
-        //}
-
-        //CgenSupport.emitComment(s, "Leaving cgen for assign");
-    }
-
-   // public void code(PrintStream s, CgenClassTable cgenTable) 
-   // {
-   //     classTable.addId(name, classTable.lookup(type_decl));
-   //     CgenNode nd = (CgenNode) cgenTable.lookup(TreeConstants.self);
-   //     CgenSupport.setCurrentMethodTempVarNumber(init.getTempNumber());
-   //     if (init.get_type() != null) 
-   //     {          
-   //         init.code(node, classTable, 0, s);
-   //         int offset = classTable.getFeatureOffset(name, node.getName(), false) + CgenSupport.DEFAULT_OBJFIELDS;
-   //         CgenSupport.emitStore(CgenSupport.ACC, offset, CgenSupport.SELF, s);
-   //     }
-   // }
-
-   // public int getTempNumber() {
-   //     return init.getTempNumber();
-   // }
-
-
 
 }
 
@@ -834,17 +805,6 @@ class dispatch extends Expression {
         CgenSupport.emitComment(s, "DONE dispatch for method "+name+ " in class " + exprType);
 
     }
-    ///**
-    // * Helper method that recursively code arguments in order.
-    // */
-    //private void pushArgs(Enumeration en, CgenClassTable cct, PrintStream s) {
-    //    if(en.hasMoreElements()) {
-    //        Expression argExpr = (Expression) en.nextElement();
-    //        pushArgs(en,cct,s);
-    //        argExpr.code(s, cct);
-    //        CgenSupport.emitPush(CgenSupport.ACC, s);
-    //    }
-    //}
 
 }
 

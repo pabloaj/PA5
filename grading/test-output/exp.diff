@@ -1,10 +1,9 @@
-6,9c6,9
+6,9c6,8
 < 128
 < 729
 < 512
 < COOL program successfully executed
 ---
-> The following symbols are undefined:
-> Main.main
-> Instruction references undefined symbol at 0x00400038
-> [0x00400038]	0x0c000000  jal 0x00000000 [Main.main]      ; 373: jal	Main.main		# Invoke main method
+> Exception occurred at PC=0x00400060
+>   Unaligned address in inst/data fetch: 0x00000006
+>   Exception 4  [Unaligned address in inst/data fetch]  Execution aborted

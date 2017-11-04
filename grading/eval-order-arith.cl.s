@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -528,3 +527,436 @@ Main.recite:
 	addiu	$sp $sp -4
 	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Generating inner code for method recite with AR_size of 16
+				#Entered cgen for block
+				#BEGIN dispatch for method out_int in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for object: value
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label0
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label0:
+	lw	$t1 8($a0)
+	lw	$t1 16($t1)
+	jalr	$t1
+				#DONE dispatch for method out_int in class Main
+				#BEGIN dispatch for method out_string in class Main
+				#Evaluating and pushing argument of type String to current frame
+				#Entered cgen for string const expression
+	la	$a0 str_const1
+				#Leaving cgen for string const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type String to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label1
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label1:
+	lw	$t1 8($a0)
+	lw	$t1 12($t1)
+	jalr	$t1
+				#DONE dispatch for method out_string in class Main
+				#Entered cgen for object: value
+	lw	$a0 8($fp)
+				#Exited cgen for object
+				#Leaving cgen for block
+				#Done Generating inner code for method recite with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method main in class Main
+Main.main:
+	addiu	$sp $sp -4
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method main with AR_size of 12
+				#Entered cgen for block
+				#Entered cgen for addition
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const0
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label2
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label2:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const1
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label3
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label3:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	add	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
+				#Entered cgen for subtract
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const2
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label4
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label4:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const3
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label5
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label5:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	sub	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for subtract
+				#Entered cgen for multiply
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const4
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label6
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label6:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const5
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label7
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label7:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	mul	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for multiply
+				#Entered cgen for divide
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const6
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label8
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label8:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const7
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label9
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label9:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	div	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for divide
+				#Entering cgen for less than
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const8
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label10
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label10:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	move	$t1 $a0
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const9
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label11
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label11:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	lw	$t1 12($t1)
+	lw	$a0 12($a0)
+	blt	$t1 $a0 label12
+label13:
+	la	$a0 bool_const0
+	b	label14
+label12:
+	la	$a0 bool_const1
+label14:
+				#Leaving cgen for less than
+				#Entering cgen for equal to
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const10
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label16
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label16:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	move	$t1 $a0
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const11
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label17
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label17:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	move	$t2 $a0
+	la	$a0 bool_const1
+	la	$a1 bool_const0
+	jal	equality_test
+label15:
+				#Leaving cgen for equal to
+				#Entering cgen for less than or equal to
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const12
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label18
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label18:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	move	$t1 $a0
+				#BEGIN dispatch for method recite in class Main
+				#Evaluating and pushing argument of type Int to current frame
+				#Entered cgen for int const expression
+	la	$a0 int_const13
+				#Leaving cgen for int const expression
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Done pushing argument of type Int to current frame
+				#Entered cgen for object: self
+	move	$a0 $s0
+				#Exited cgen for object
+	bne	$a0 $zero label19
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label19:
+	lw	$t1 8($a0)
+	lw	$t1 28($t1)
+	jalr	$t1
+				#DONE dispatch for method recite in class Main
+	lw	$t1 12($t1)
+	lw	$a0 12($a0)
+	ble	$t1 $a0 label20
+label21:
+	la	$a0 bool_const0
+	b	label22
+label20:
+	la	$a0 bool_const1
+label22:
+				#Leaving cgen for less than or equal to
+				#Leaving cgen for block
+				#Done Generating inner code for method main with AR_size of 12
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jr	$ra	
+				#Leaving codeClassMethods for Main

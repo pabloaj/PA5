@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -592,5 +591,3 @@ label6:
 	addiu	$sp $sp 4
 	jr	$ra	
 				#Leaving codeClassMethods for Main
-
-# end of generated code

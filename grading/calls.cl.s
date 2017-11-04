@@ -1,4 +1,3 @@
-# start of generated code
 	.data
 	.align	2
 	.globl	class_nameTab
@@ -626,3 +625,104 @@ Main.f:
 	addiu	$sp $sp -4
 	addiu	$fp $sp 16
 	move	$s0 $a0
+				#Generating inner code for method f with AR_size of 20
+				#Entered cgen for addition
+				#Entered cgen for object: x
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for object: y
+	lw	$a0 12($fp)
+				#Exited cgen for object
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	add	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
+				#Done Generating inner code for method f with AR_size of 20
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
+	addiu	$sp $sp 12
+	jr	$ra	
+				#Generating code for method g in class Main
+Main.g:
+	addiu	$sp $sp -8
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method g with AR_size of 16
+				#Entered cgen for addition
+				#Entered cgen for object: x
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
+	la	$a0 int_const2
+				#Leaving cgen for int const expression
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	add	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
+				#Done Generating inner code for method g with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Generating code for method h in class Main
+Main.h:
+	addiu	$sp $sp -8
+	sw	$fp 0($sp)
+	addiu	$sp $sp -4
+	sw	$s0 0($sp)
+	addiu	$sp $sp -4
+	sw	$ra 0($sp)
+	addiu	$sp $sp -4
+	addiu	$fp $sp 16
+	move	$s0 $a0
+				#Generating inner code for method h with AR_size of 16
+				#Entered cgen for addition
+				#Entered cgen for object: x
+	lw	$a0 8($fp)
+				#Exited cgen for object
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+				#Entered cgen for int const expression
+	la	$a0 int_const3
+				#Leaving cgen for int const expression
+	jal	Object.copy
+	lw	$t1 4($sp)
+	lw	$t1 12($t1)
+	lw	$t2 12($a0)
+	add	$t1 $t1 $t2
+	sw	$t1 12($a0)
+	addiu	$sp $sp 4
+				#Leaving cgen for addition
+				#Done Generating inner code for method h with AR_size of 16
+				#Incrementing Stack pointer and Restoring FP, SELF, and then jumping
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 16
+	addiu	$sp $sp 8
+	jr	$ra	
+				#Leaving codeClassMethods for Main
