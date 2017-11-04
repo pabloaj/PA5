@@ -529,6 +529,10 @@ class CgenSupport {
 	emitLoad(ACC, 0, SP, s);
     }
 
+    /****************************************************************/
+
+    
+
     /** Emits code to check the garbage collector 
      * @param s the output stream
      * */

@@ -37,12 +37,11 @@ abstract class Class_ extends TreeNode {
     public abstract AbstractSymbol getParent();
     public abstract AbstractSymbol getFilename();
     public abstract Features getFeatures();
-
 }
 
 
 /** Defines list phylum Classes
-  <p>
+  <p>cgenTable
   See <a href="ListNode.html">ListNode</a> for full documentation. */
 class Classes extends ListNode {
     public final static Class elementClass = Class_.class;
@@ -443,6 +442,55 @@ class attr extends Feature {
         init.dump_with_types(out, n + 2);
     }
 
+    public void code(PrintStream s, CgenClassTable cgenTable) 
+    {
+        //CgenSupport.emitComment(s, "Entered cgen for assign");
+
+        //expr.code(s, cgenTable);
+
+        //First check if this variable is in current scope
+        //if(cgenTable.probe(name) == null) 
+        //{
+            //not in current scope so it must be an attribute, so get offset of attribute
+            // and load into current scope
+        //    CgenNode nd = (CgenNode) cgenTable.lookup(TreeConstants.self);
+        //    int attrOffset = CgenNode.attrOffsetMap.get(nd.name).get(name);
+        //    CgenSupport.emitStore(CgenSupport.ACC, (2+attrOffset), CgenSupport.SELF, s);
+            // garbage collect
+        //    if (Flags.cgen_Memmgr != Flags.GC_NOGC) 
+        //    {
+        //        CgenSupport.emitAddiu(CgenSupport.A1, CgenSupport.SELF, attrOffset,s);
+        //        CgenSupport.emitJal("_GenGC_Assign", s);
+        //    }
+        //} 
+        //else {
+            //is in the current scope, so get offset in frame and load into $a0
+        //    int frameOffset = (Integer) cgenTable.probe(name);
+        //    CgenSupport.emitStore(CgenSupport.ACC, frameOffset, CgenSupport.FP, s);
+        //}
+
+        //CgenSupport.emitComment(s, "Leaving cgen for assign");
+    }
+
+   // public void code(PrintStream s, CgenClassTable cgenTable) 
+   // {
+   //     classTable.addId(name, classTable.lookup(type_decl));
+   //     CgenNode nd = (CgenNode) cgenTable.lookup(TreeConstants.self);
+   //     CgenSupport.setCurrentMethodTempVarNumber(init.getTempNumber());
+   //     if (init.get_type() != null) 
+   //     {          
+   //         init.code(node, classTable, 0, s);
+   //         int offset = classTable.getFeatureOffset(name, node.getName(), false) + CgenSupport.DEFAULT_OBJFIELDS;
+   //         CgenSupport.emitStore(CgenSupport.ACC, offset, CgenSupport.SELF, s);
+   //     }
+   // }
+
+   // public int getTempNumber() {
+   //     return init.getTempNumber();
+   // }
+
+
+
 }
 
 
@@ -564,24 +612,28 @@ class assign extends Expression {
      * you wish.)
      * @param s the output stream 
      * */
-    public void code(PrintStream s, CgenClassTable cgenTable) {
+    public void code(PrintStream s, CgenClassTable cgenTable) 
+    {
         CgenSupport.emitComment(s, "Entered cgen for assign");
 
         expr.code(s, cgenTable);
 
         //First check if this variable is in current scope
-        if(cgenTable.probe(name) == null) {
+        if(cgenTable.probe(name) == null) 
+        {
             //not in current scope so it must be an attribute, so get offset of attribute
             // and load into current scope
             CgenNode nd = (CgenNode) cgenTable.lookup(TreeConstants.self);
             int attrOffset = CgenNode.attrOffsetMap.get(nd.name).get(name);
             CgenSupport.emitStore(CgenSupport.ACC, (2+attrOffset), CgenSupport.SELF, s);
             // garbage collect
-            if (Flags.cgen_Memmgr != Flags.GC_NOGC) {
+            if (Flags.cgen_Memmgr != Flags.GC_NOGC) 
+            {
                 CgenSupport.emitAddiu(CgenSupport.A1, CgenSupport.SELF, attrOffset,s);
                 CgenSupport.emitJal("_GenGC_Assign", s);
             }
-        } else {
+        } 
+        else {
             //is in the current scope, so get offset in frame and load into $a0
             int frameOffset = (Integer) cgenTable.probe(name);
             CgenSupport.emitStore(CgenSupport.ACC, frameOffset, CgenSupport.FP, s);
@@ -589,8 +641,6 @@ class assign extends Expression {
 
         CgenSupport.emitComment(s, "Leaving cgen for assign");
     }
-
-
 }
 
 
@@ -927,10 +977,7 @@ class loop extends Expression {
         CgenSupport.emitLabelDef(whileEndLabel, s);
         //CgenSupport.emitLoadImm(CgenSupport.ACC, 0, s);
         CgenSupport.emitComment(s, "Leaving cgen for loop");
-
     }
-
-
 }
 
 
@@ -1075,9 +1122,11 @@ class block extends Expression {
      * you wish.)
      * @param s the output stream 
      * */
-    public void code(PrintStream s, CgenClassTable cgenTable) {
+    public void code(PrintStream s, CgenClassTable cgenTable) 
+    {
         CgenSupport.emitComment(s, "Entered cgen for block");
-        for (Enumeration e = body.getElements(); e.hasMoreElements(); ) {
+        for (Enumeration e = body.getElements(); e.hasMoreElements(); ) 
+        {
             ((Expression) e.nextElement()).code(s, cgenTable);
         }
         CgenSupport.emitComment(s, "Leaving cgen for block");
@@ -1136,7 +1185,31 @@ class let extends Expression {
      * you wish.)
      * @param s the output stream 
      * */
-    public void code(PrintStream s, CgenClassTable cgenTable) {
+    public void code(PrintStream s, CgenClassTable cgenTable) 
+    {
+     //   int tempVarNumber = CgenSupport.getCurrentMethodTempVarNumber();
+     //   classTable.enterScope();
+     //   if (init instanceof no_expr) 
+     //   {
+     //       CgenSupport.initVar(sym, s); 
+     //   } 
+     //   else 
+     //   {
+    //        init.code(node, classTable, curTemp, s);
+    //    }
+        
+    //    classTable.addId(identifier, new Integer(curTemp));
+    //    CgenSupport.emitStore(CgenSupport.ACC, curTemp, CgenSupport.FP, s);
+    //    curTemp++;
+
+    //    body.code(node, classTable, curTemp, s);
+    //    classTable.exitScope();
+    }
+
+    //public int getTempNumber() {
+    //    return CgenSupport.max(init.getTempNumber(), body.getTempNumber() + 1);
+    //}
+
         //cgenTable.enterScope();
         //CgenSupport.emitComment(s, "Entered cgen for let with identifier " + identifier);
 
@@ -1146,12 +1219,11 @@ class let extends Expression {
         //push value of expression to stack
         //CgenSupport.emitPush(CgenSupport.ACC,s);
         //frame offset to this let variable;
-        //int offsetLet = CgenSupport.WORD_SIZE*2;
-
+        //int offsetLet = CgenSupport.WORD_SIZE;
 
         //CgenSupport.emitComment(s, "Leaving cgen for let with identifier " + identifier);
         //cgenTable.exitScope();
-    }
+    //}
 
 
 }
@@ -1196,7 +1268,8 @@ class plus extends Expression {
      * you wish.)
      * @param s the output stream 
      * */
-    public void code(PrintStream s, CgenClassTable cgenTable) {
+    public void code(PrintStream s, CgenClassTable cgenTable) 
+    {
         CgenSupport.emitComment(s, "Entered cgen for addition");
         // evaluate e1
         e1.code(s, cgenTable);
@@ -1206,6 +1279,9 @@ class plus extends Expression {
         // cgen(e2)
         e2.code(s, cgenTable);
 
+
+        //CgenSupport.emitLoad(CgenSupport.S1, 1, CgenSupport.SP, s);
+        //CgenSupport.emitAddiu(CgenSupport.SP, CgenSupport.SP, 4, s);
         // create a new integer object that is a copy of current one
         // (since $a0 currently contains an integer object)
         CgenSupport.emitJal(CgenSupport.OBJECT_DOT_COPY, s);
@@ -1516,8 +1592,6 @@ class neg extends Expression {
 
         CgenSupport.emitComment(s, "Leaving cgen for negate");
     }
-
-
 }
 
 
